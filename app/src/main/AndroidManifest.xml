@@ -4,6 +4,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROCESSING" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
     <application
@@ -14,6 +15,9 @@
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme">
+
+        <activity android:name=".PlayerActivity" android:exported="false" />
+        <activity android:name=".DownloadsActivity" android:exported="false" />
 
         <activity
             android:name=".MainActivity"
@@ -39,8 +43,13 @@
         </activity>
 
         <service
-            android:name=".HlsDownloadService"
+            android:name=".DownloadQueueService"
             android:exported="false"
             android:foregroundServiceType="dataSync" />
+
+        <service
+            android:name=".AudioConvertService"
+            android:exported="false"
+            android:foregroundServiceType="mediaProcessing" />
     </application>
 </manifest>
