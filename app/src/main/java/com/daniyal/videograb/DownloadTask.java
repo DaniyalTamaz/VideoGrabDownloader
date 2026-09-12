@@ -2,12 +2,12 @@ package com.daniyal.videograb;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.util.UUID;
 
 public class DownloadTask {
     public static final String KIND_DIRECT = "direct";
     public static final String KIND_HLS = "hls";
+    public static final String KIND_DASH = "dash";
     public static final String MODE_VIDEO = "video";
     public static final String MODE_MP3 = "mp3";
     public static final String STATUS_QUEUED = "queued";
@@ -34,6 +34,8 @@ public class DownloadTask {
     public int progress = 0;
     public int mp3Bitrate = 192;
     public int segmentIndex = 0;
+    public int dashVideoStream = -1;
+    public int dashAudioStream = -1;
     public long downloaded = 0;
     public long total = -1;
     public long createdAt = System.currentTimeMillis();
@@ -44,6 +46,7 @@ public class DownloadTask {
         o.put("quality", quality); o.put("status", status); o.put("userAgent", userAgent); o.put("cookie", cookie);
         o.put("referer", referer); o.put("tempPath", tempPath); o.put("outputUri", outputUri); o.put("error", error);
         o.put("mime", mime); o.put("progress", progress); o.put("mp3Bitrate", mp3Bitrate); o.put("segmentIndex", segmentIndex);
+        o.put("dashVideoStream", dashVideoStream); o.put("dashAudioStream", dashAudioStream);
         o.put("downloaded", downloaded); o.put("total", total); o.put("createdAt", createdAt);
         return o;
     }
@@ -55,15 +58,16 @@ public class DownloadTask {
         t.status = o.optString("status", STATUS_QUEUED); t.userAgent = o.optString("userAgent", ""); t.cookie = o.optString("cookie", "");
         t.referer = o.optString("referer", ""); t.tempPath = o.optString("tempPath", ""); t.outputUri = o.optString("outputUri", "");
         t.error = o.optString("error", ""); t.mime = o.optString("mime", "video/mp4"); t.progress = o.optInt("progress", 0);
-        t.mp3Bitrate = o.optInt("mp3Bitrate", 192); t.segmentIndex = o.optInt("segmentIndex", 0); t.downloaded = o.optLong("downloaded", 0);
-        t.total = o.optLong("total", -1); t.createdAt = o.optLong("createdAt", System.currentTimeMillis());
+        t.mp3Bitrate = o.optInt("mp3Bitrate", 192); t.segmentIndex = o.optInt("segmentIndex", 0);
+        t.dashVideoStream = o.optInt("dashVideoStream", -1); t.dashAudioStream = o.optInt("dashAudioStream", -1);
+        t.downloaded = o.optLong("downloaded", 0); t.total = o.optLong("total", -1); t.createdAt = o.optLong("createdAt", System.currentTimeMillis());
         return t;
     }
 
     public String shortStatus() {
         switch (status) {
             case STATUS_QUEUED: return "Queued";
-            case STATUS_DOWNLOADING: return "Downloading " + progress + "%";
+            case STATUS_DOWNLOADING: return DownloadTask.KIND_DASH.equals(kind) ? "Processing DASH • " + progress + "%" : "Downloading " + progress + "%";
             case STATUS_PAUSED: return "Paused • " + progress + "%";
             case STATUS_COMPLETED: return "Completed";
             case STATUS_FAILED: return "Failed";
