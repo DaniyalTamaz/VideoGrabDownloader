@@ -42,3 +42,5 @@ jobs:
           name: VideoGrab-debug-apk
           path: app/build/outputs/apk/debug/app-debug.apk
           if-no-files-found: error
+
+# Cloud build: no Android Studio required on the local PC.
