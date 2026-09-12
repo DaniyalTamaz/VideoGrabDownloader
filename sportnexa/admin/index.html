@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SportNexa Admin</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div class="brand">
+        <h1>SportNexa Admin</h1>
+        <p>Remote channel management • changes publish without rebuilding the Android app</p>
+      </div>
+      <div class="actions">
+        <button class="btn" id="reloadBtn">Reload Live</button>
+        <button class="btn" id="importBtn">Import JSON</button>
+        <button class="btn" id="exportBtn">Export JSON</button>
+        <button class="btn primary" id="addBtn">+ Add Channel</button>
+        <input id="fileInput" type="file" accept="application/json,.json" class="hidden">
+      </div>
+    </header>
+
+    <section class="stats">
+      <div class="stat"><div class="label">Total</div><div class="value" id="statTotal">0</div></div>
+      <div class="stat"><div class="label">Enabled</div><div class="value" id="statEnabled">0</div></div>
+      <div class="stat"><div class="label">Disabled</div><div class="value" id="statDisabled">0</div></div>
+      <div class="stat"><div class="label">Featured</div><div class="value" id="statFeatured">0</div></div>
+    </section>
+
+    <section class="toolbar">
+      <input class="grow" id="searchInput" placeholder="Search channel name, category, or URL">
+      <select id="filterSelect">
+        <option value="all">All channels</option>
+        <option value="enabled">Enabled only</option>
+        <option value="disabled">Disabled only</option>
+        <option value="featured">Featured only</option>
+      </select>
+      <button class="btn" id="normalizeBtn">Normalize Order</button>
+    </section>
+
+    <section class="layout">
+      <div class="panel">
+        <div class="panel-head">
+          <div>
+            <h2>Channels</h2>
+            <div class="muted" id="dbMeta">Loading live database…</div>
+          </div>
+          <div class="muted" id="visibleCount">0 shown</div>
+        </div>
+        <div class="channel-list" id="channelList"></div>
+      </div>
+
+      <div>
+        <section class="panel editor">
+          <h3 id="editorTitle">Add Channel</h3>
+          <div class="field">
+            <label>Channel name *</label>
+            <input id="nameField" placeholder="Example Sports HD">
+          </div>
+          <div class="grid2">
+            <div class="field">
+              <label>Category</label>
+              <input id="categoryField" placeholder="Sports">
+            </div>
+            <div class="field">
+              <label>Display order</label>
+              <input id="orderField" type="number" min="1" step="1" value="1">
+            </div>
+          </div>
+          <div class="field">
+            <label>Primary stream URL *</label>
+            <input id="primaryField" placeholder="https://.../master.m3u8">
+          </div>
+          <div class="field">
+            <label>Backup stream URL</label>
+            <input id="backupField" placeholder="https://.../backup.m3u8">
+          </div>
+          <div class="field">
+            <label>Logo URL</label>
+            <input id="logoField" placeholder="https://.../logo.png">
+          </div>
+          <div class="switches">
+            <label class="check"><input id="enabledField" type="checkbox" checked> Enabled</label>
+            <label class="check"><input id="featuredField" type="checkbox"> Featured</label>
+          </div>
+          <div class="editor-actions">
+            <button class="btn primary" id="saveBtn">Save Channel</button>
+            <button class="btn" id="duplicateBtn">Duplicate</button>
+            <button class="btn danger" id="deleteBtn">Delete</button>
+            <button class="btn ghost" id="clearBtn">Clear</button>
+          </div>
+          <div class="help" id="editorHelp">Primary URL and channel name are required. Only add streams you are authorized to use.</div>
+        </section>
+
+        <section class="panel publish">
+          <h3>Publish Remote Database</h3>
+          <p>A fine-grained GitHub token is used only for this browser session. It is not saved to local storage or committed anywhere. Give it Contents: Read and write permission only for the repository that hosts this JSON file.</p>
+          <div class="token-row">
+            <input id="tokenField" type="password" autocomplete="off" placeholder="Fine-grained GitHub token">
+            <button class="btn primary" id="publishBtn">Publish</button>
+          </div>
+          <div class="status" id="publishStatus">Not published in this session.</div>
+        </section>
+      </div>
+    </section>
+
+    <footer>SportNexa Admin • Remote database: <span id="remotePath"></span></footer>
+  </main>
+  <script src="./app.js"></script>
+</body>
+</html>
