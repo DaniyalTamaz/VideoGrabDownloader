@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">VideoGrab</string>
+    <string name="notification_channel_name">Video downloads</string>
+</resources>

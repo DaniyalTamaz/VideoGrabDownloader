@@ -1,0 +1,16 @@
+VIDEOGRAB BUILD NOTES
+=====================
+
+1. Open this folder in current Android Studio.
+2. Install Android SDK Platform 36 if Android Studio requests it.
+3. Ensure Android Studio uses JDK 17 or newer compatible JDK for the Gradle build.
+4. Sync the project.
+5. Build > Generate App Bundles or APKs > Generate APKs (or Build APK(s), depending on your Android Studio UI).
+6. Install app/build/outputs/apk/debug/app-debug.apk on an Android 10+ phone.
+
+Chrome workflow:
+Open a page in Chrome > Share > VideoGrab > play the video inside VideoGrab > tap Videos (N) > select the detected media.
+
+Implemented: direct media + ordinary unencrypted HLS VOD.
+Detected but not merged in v1: DASH/MPD.
+Not supported: DRM/Widevine, encrypted HLS, live HLS, HLS byte-range playlists, blob-only media with no exposed source request.
