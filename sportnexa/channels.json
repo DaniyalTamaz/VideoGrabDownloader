@@ -1,0 +1,36 @@
+{
+  "version": "1",
+  "updatedAt": "2026-09-12T18:40:00+03:00",
+  "channels": [
+    {
+      "name": "SportNexa Remote HD",
+      "category": "Demo",
+      "primaryUrl": "https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_16x9/bipbop_16x9_variant.m3u8",
+      "backupUrl": "https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_4x3/bipbop_4x3_variant.m3u8",
+      "logo": "",
+      "enabled": true,
+      "featured": true,
+      "order": 1
+    },
+    {
+      "name": "SportNexa Remote Classic",
+      "category": "Demo",
+      "primaryUrl": "https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_4x3/bipbop_4x3_variant.m3u8",
+      "backupUrl": "https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_16x9/bipbop_16x9_variant.m3u8",
+      "logo": "",
+      "enabled": true,
+      "featured": false,
+      "order": 2
+    },
+    {
+      "name": "Hidden Remote Example",
+      "category": "Demo",
+      "primaryUrl": "https://example.com/disabled/master.m3u8",
+      "backupUrl": "",
+      "logo": "",
+      "enabled": false,
+      "featured": false,
+      "order": 3
+    }
+  ]
+}
