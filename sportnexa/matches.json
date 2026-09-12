@@ -1,0 +1,54 @@
+{
+  "version": "1",
+  "updatedAt": "2026-09-12T22:25:00+03:00",
+  "matches": [
+    {
+      "id": "demo-live-1",
+      "homeTeam": "SportNexa Falcons",
+      "awayTeam": "SportNexa Tigers",
+      "homeLogo": "",
+      "awayLogo": "",
+      "sport": "Football",
+      "league": "SportNexa Demo League",
+      "startTime": "2026-09-12T21:30:00+03:00",
+      "endTime": "2026-09-12T23:45:00+03:00",
+      "status": "live",
+      "channelName": "SportNexa Classic — REMOTE UPDATE",
+      "channelUrl": "https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_4x3/bipbop_4x3_variant.m3u8",
+      "enabled": true,
+      "order": 1
+    },
+    {
+      "id": "demo-upcoming-1",
+      "homeTeam": "SportNexa United",
+      "awayTeam": "SportNexa City",
+      "homeLogo": "",
+      "awayLogo": "",
+      "sport": "Football",
+      "league": "SportNexa Demo League",
+      "startTime": "2026-09-13T18:00:00+03:00",
+      "endTime": "2026-09-13T20:00:00+03:00",
+      "status": "auto",
+      "channelName": "SportNexa Remote HD",
+      "channelUrl": "https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_16x9/bipbop_16x9_variant.m3u8",
+      "enabled": true,
+      "order": 2
+    },
+    {
+      "id": "demo-disabled-match",
+      "homeTeam": "Hidden Team A",
+      "awayTeam": "Hidden Team B",
+      "homeLogo": "",
+      "awayLogo": "",
+      "sport": "Cricket",
+      "league": "Hidden Demo",
+      "startTime": "2026-09-14T18:00:00+03:00",
+      "endTime": "2026-09-14T22:00:00+03:00",
+      "status": "auto",
+      "channelName": "",
+      "channelUrl": "",
+      "enabled": false,
+      "order": 3
+    }
+  ]
+}
