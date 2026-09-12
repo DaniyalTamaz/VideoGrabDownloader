@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SportNexa App Control</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div class="brand">
+        <h1>SportNexa App Control</h1>
+        <p>Remote version control • recommended / force update settings</p>
+      </div>
+      <div class="actions">
+        <button class="btn" onclick="location.href='./index.html'">← Channels</button>
+        <button class="btn" onclick="location.href='./matches.html'">Matches</button>
+        <button class="btn" id="reloadBtn">Reload Live</button>
+      </div>
+    </header>
+
+    <section class="stats">
+      <div class="stat"><div class="label">Latest code</div><div class="value" id="statCode">--</div></div>
+      <div class="stat"><div class="label">Latest version</div><div class="value" id="statName">--</div></div>
+      <div class="stat"><div class="label">Update policy</div><div class="value" id="statPolicy">--</div></div>
+      <div class="stat"><div class="label">Manifest</div><div class="value" id="statManifest">--</div></div>
+    </section>
+
+    <section class="layout">
+      <div class="panel editor">
+        <h3>Update Settings</h3>
+        <div class="grid2">
+          <div class="field">
+            <label>Latest version code *</label>
+            <input id="versionCodeField" type="number" min="1" step="1" placeholder="11">
+          </div>
+          <div class="field">
+            <label>Latest version name *</label>
+            <input id="versionNameField" placeholder="0.7.0">
+          </div>
+        </div>
+        <div class="field">
+          <label>Update / APK URL</label>
+          <input id="updateUrlField" type="url" placeholder="https://...">
+        </div>
+        <div class="field">
+          <label>Update message</label>
+          <input id="messageField" placeholder="A new SportNexa version is available.">
+        </div>
+        <div class="switches">
+          <label class="check"><input id="forceField" type="checkbox"> Force update</label>
+          <label class="check"><input id="enabledField" type="checkbox" checked> Update checking enabled</label>
+        </div>
+        <div class="help" id="editorHelp">Force Update should only be enabled after the replacement APK/update URL is confirmed working. Leaving the URL blank prevents the Android app from showing an update prompt.</div>
+      </div>
+
+      <div>
+        <section class="panel publish">
+          <h3>Publish App Control</h3>
+          <p>Use the same restricted fine-grained GitHub token used by Channels and Matches. It is used only for this browser session and cleared after a successful publish.</p>
+          <div class="token-row">
+            <input id="tokenField" type="password" autocomplete="off" placeholder="Fine-grained GitHub token">
+            <button class="btn primary" id="publishBtn">Publish App Control</button>
+          </div>
+          <div class="status" id="publishStatus">Not published in this session.</div>
+        </section>
+
+        <section class="panel publish">
+          <h3>How SportNexa uses this</h3>
+          <p>The Android app compares its installed version code with this remote manifest. A newer version can be recommended or required. If Update checking is disabled, the manifest publishes version code 0 so installed apps ignore it.</p>
+          <div class="status" id="metaStatus">Loading live manifest…</div>
+        </section>
+      </div>
+    </section>
+
+    <footer>SportNexa App Control • Remote manifest: <span id="remotePath"></span></footer>
+  </main>
+  <script src="./version.js"></script>
+</body>
+</html>
