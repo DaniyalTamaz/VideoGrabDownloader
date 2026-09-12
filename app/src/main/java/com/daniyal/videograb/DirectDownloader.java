@@ -13,11 +13,11 @@ public final class DirectDownloader {
         String name = URLUtil.guessFileName(url, null, null);
         DownloadManager.Request r = new DownloadManager.Request(Uri.parse(url));
         r.setTitle(name);
-        r.setDescription("Downloading video");
+        r.setDescription("Downloading with VideoGrab");
         r.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
         r.setAllowedOverMetered(true);
         r.setAllowedOverRoaming(false);
-        r.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, name);
+        r.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, "VideoGrab/" + name);
         if (userAgent != null && !userAgent.trim().isEmpty()) r.addRequestHeader("User-Agent", userAgent);
         if (cookie != null && !cookie.trim().isEmpty()) r.addRequestHeader("Cookie", cookie);
         if (referer != null && !referer.trim().isEmpty()) r.addRequestHeader("Referer", referer);
