@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SportNexa Matches</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div class="brand">
+        <h1>SportNexa Matches</h1>
+        <p>Remote match schedule • Live / Today / Tomorrow / Upcoming</p>
+      </div>
+      <div class="actions">
+        <button class="btn" onclick="location.href='./index.html'">← Channels</button>
+        <button class="btn" id="reloadBtn">Reload Live</button>
+        <button class="btn" id="exportBtn">Export JSON</button>
+        <button class="btn primary" id="addBtn">+ Add Match</button>
+      </div>
+    </header>
+
+    <section class="stats">
+      <div class="stat"><div class="label">Total</div><div class="value" id="statTotal">0</div></div>
+      <div class="stat"><div class="label">Enabled</div><div class="value" id="statEnabled">0</div></div>
+      <div class="stat"><div class="label">Live now</div><div class="value" id="statLive">0</div></div>
+      <div class="stat"><div class="label">Upcoming</div><div class="value" id="statUpcoming">0</div></div>
+    </section>
+
+    <section class="toolbar">
+      <input class="grow" id="searchInput" placeholder="Search teams, league, sport, or channel">
+      <select id="filterSelect">
+        <option value="all">All matches</option>
+        <option value="live">Live</option>
+        <option value="upcoming">Upcoming</option>
+        <option value="finished">Finished</option>
+        <option value="disabled">Disabled</option>
+      </select>
+      <button class="btn" id="normalizeBtn">Normalize Order</button>
+    </section>
+
+    <section class="layout">
+      <div class="panel">
+        <div class="panel-head">
+          <div>
+            <h2>Matches</h2>
+            <div class="muted" id="dbMeta">Loading live database…</div>
+          </div>
+          <div class="muted" id="visibleCount">0 shown</div>
+        </div>
+        <div class="channel-list" id="matchList"></div>
+      </div>
+
+      <div>
+        <section class="panel editor">
+          <h3 id="editorTitle">Add Match</h3>
+          <div class="grid2">
+            <div class="field"><label>Home team *</label><input id="homeField" placeholder="Home Team"></div>
+            <div class="field"><label>Away team *</label><input id="awayField" placeholder="Away Team"></div>
+          </div>
+          <div class="grid2">
+            <div class="field"><label>Sport</label><input id="sportField" placeholder="Football"></div>
+            <div class="field"><label>League / tournament</label><input id="leagueField" placeholder="League"></div>
+          </div>
+          <div class="grid2">
+            <div class="field"><label>Start time *</label><input id="startField" type="datetime-local"></div>
+            <div class="field"><label>End time</label><input id="endField" type="datetime-local"></div>
+          </div>
+          <div class="grid2">
+            <div class="field">
+              <label>Status</label>
+              <select id="statusField">
+                <option value="auto">Auto from time</option>
+                <option value="upcoming">Force Upcoming</option>
+                <option value="live">Force Live</option>
+                <option value="finished">Force Finished</option>
+              </select>
+            </div>
+            <div class="field"><label>Display order</label><input id="orderField" type="number" min="1" step="1" value="1"></div>
+          </div>
+          <div class="field">
+            <label>Linked SportNexa channel</label>
+            <select id="channelField"><option value="">No linked channel</option></select>
+          </div>
+          <div class="grid2">
+            <div class="field"><label>Home team logo URL</label><input id="homeLogoField" placeholder="https://.../home.png"></div>
+            <div class="field"><label>Away team logo URL</label><input id="awayLogoField" placeholder="https://.../away.png"></div>
+          </div>
+          <div class="switches">
+            <label class="check"><input id="enabledField" type="checkbox" checked> Enabled</label>
+            <label class="check"><input id="keepLiveField" type="checkbox"> Quick force Live</label>
+          </div>
+          <div class="editor-actions">
+            <button class="btn primary" id="saveBtn">Save Match</button>
+            <button class="btn" id="duplicateBtn">Duplicate</button>
+            <button class="btn danger" id="deleteBtn">Delete</button>
+            <button class="btn ghost" id="clearBtn">Clear</button>
+          </div>
+          <div class="help" id="editorHelp">Times use your browser's local timezone and are published as ISO timestamps. Link only channels you are authorized to use.</div>
+        </section>
+
+        <section class="panel publish">
+          <h3>Publish Match Schedule</h3>
+          <p>Use the same restricted fine-grained GitHub token as the channel admin. The token is used only in this page session and is cleared after a successful publish.</p>
+          <div class="token-row">
+            <input id="tokenField" type="password" autocomplete="off" placeholder="Fine-grained GitHub token">
+            <button class="btn primary" id="publishBtn">Publish Matches</button>
+          </div>
+          <div class="status" id="publishStatus">Not published in this session.</div>
+        </section>
+      </div>
+    </section>
+
+    <footer>SportNexa Match Admin • Remote database: <span id="remotePath"></span></footer>
+  </main>
+  <script src="./matches.js"></script>
+</body>
+</html>
