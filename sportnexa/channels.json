@@ -1,6 +1,6 @@
 {
-  "version": "2",
-  "updatedAt": "2026-09-12T18:45:00+03:00",
+  "version": "3",
+  "updatedAt": "2026-09-13T07:36:47.666Z",
   "channels": [
     {
       "name": "SportNexa Classic — REMOTE UPDATE",
@@ -31,6 +31,56 @@
       "enabled": false,
       "featured": false,
       "order": 3
+    },
+    {
+      "name": "Al Iraqia Sport",
+      "category": "Sports",
+      "primaryUrl": "https://imn-live.esite-lab.com/hls/iraqia-sports-1.m3u8",
+      "backupUrl": "",
+      "logo": "https://i.imgur.com/DrrlxTO.png",
+      "enabled": false,
+      "featured": false,
+      "order": 4
+    },
+    {
+      "name": "Alkass Four",
+      "category": "Sports",
+      "primaryUrl": "https://liveeu-gcp.alkassdigital.net/alkass4-p/main.m3u8",
+      "backupUrl": "",
+      "logo": "https://i.imgur.com/iDL65Wu.png",
+      "enabled": false,
+      "featured": false,
+      "order": 5
+    },
+    {
+      "name": "Alkass One",
+      "category": "Sports",
+      "primaryUrl": "https://liveeu-gcp.alkassdigital.net/alkass1-p/main.m3u8",
+      "backupUrl": "",
+      "logo": "https://i.imgur.com/10mmlha.png",
+      "enabled": false,
+      "featured": false,
+      "order": 6
+    },
+    {
+      "name": "Alkass SHOOF",
+      "category": "Sports",
+      "primaryUrl": "https://liveeu-gcp.alkassdigital.net/shooflive/main.m3u8",
+      "backupUrl": "",
+      "logo": "https://shoof.alkass.net/assets/images/shoof.png",
+      "enabled": false,
+      "featured": false,
+      "order": 7
+    },
+    {
+      "name": "Alkass SHOOF 2",
+      "category": "Sports",
+      "primaryUrl": "https://liveeu-gcp.alkassdigital.net/shooflive2/main.m3u8",
+      "backupUrl": "",
+      "logo": "https://shoof.alkass.net/assets/images/shoof2.png",
+      "enabled": false,
+      "featured": false,
+      "order": 8
     }
   ]
 }
