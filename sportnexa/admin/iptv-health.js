@@ -29,6 +29,7 @@
     queueId: '',
     testedAt: '',
     polling: false,
+    activeQueueId: '',
     applyTimer: null
   };
 
@@ -42,6 +43,14 @@
     if (!el.healthStatus) return;
     el.healthStatus.textContent = text;
     el.healthStatus.className = `status ${cls}`.trim();
+  }
+
+  function setTestingDisabled(disabled) {
+    if (el.testSelected) el.testSelected.disabled = disabled;
+    if (el.testVisible) el.testVisible.disabled = disabled;
+    document.querySelectorAll('.health-test-btn').forEach(button => {
+      button.disabled = disabled;
+    });
   }
 
   function b64encode(text) {
@@ -122,6 +131,7 @@
       button.className = 'small-btn health-test-btn';
       button.textContent = 'Test Stream';
       button.type = 'button';
+      button.disabled = state.polling;
       button.onclick = event => {
         event.preventDefault();
         event.stopPropagation();
@@ -217,6 +227,10 @@
   }
 
   async function queueHealth(streams) {
+    if (state.polling) {
+      return setHealthStatus('A stream health test is already running. Wait for it to finish, then start the next test.', 'err');
+    }
+
     const items = uniqueStreams(streams);
     if (!items.length) return setHealthStatus('Choose at least one stream to test.', 'err');
     const token = el.token ? el.token.value.trim() : '';
@@ -235,9 +249,11 @@
       'X-GitHub-Api-Version': '2022-11-28'
     };
 
+    state.polling = true;
+    state.activeQueueId = queueId;
+    setTestingDisabled(true);
+
     try {
-      if (el.testSelected) el.testSelected.disabled = true;
-      if (el.testVisible) el.testVisible.disabled = true;
       setHealthStatus(`Queueing ${items.length} stream test${items.length === 1 ? '' : 's'}…`);
       const currentResponse = await fetch(`${API_QUEUE}?ref=${BRANCH}`, { headers, cache: 'no-store' });
       if (!currentResponse.ok) throw new Error(`GitHub queue read failed (${currentResponse.status})`);
@@ -258,17 +274,20 @@
       pollForQueue(queueId, items.length);
     } catch (err) {
       setHealthStatus(err.message || String(err), 'err');
-      if (el.testSelected) el.testSelected.disabled = false;
-      if (el.testVisible) el.testVisible.disabled = false;
+      if (state.activeQueueId === queueId) {
+        state.polling = false;
+        state.activeQueueId = '';
+        setTestingDisabled(false);
+      }
     }
   }
 
   async function pollForQueue(queueId, count) {
-    if (state.polling) return;
-    state.polling = true;
     try {
       for (let attempt = 1; attempt <= POLL_LIMIT; attempt++) {
+        if (state.activeQueueId !== queueId) return;
         await new Promise(resolve => setTimeout(resolve, POLL_MS));
+        if (state.activeQueueId !== queueId) return;
         try {
           const data = await fetchHealthResults();
           if (s(data.queueId) !== queueId) {
@@ -290,9 +309,11 @@
       }
       setHealthStatus('Health test is taking longer than expected. Click Reload Health in a moment.', 'err');
     } finally {
-      state.polling = false;
-      if (el.testSelected) el.testSelected.disabled = false;
-      if (el.testVisible) el.testVisible.disabled = false;
+      if (state.activeQueueId === queueId) {
+        state.polling = false;
+        state.activeQueueId = '';
+        setTestingDisabled(false);
+      }
     }
   }
 
