@@ -1,9 +1,9 @@
 {
-  "version": "11",
-  "updatedAt": "2026-09-13T13:04:24.339849Z",
-  "latestVersionCode": 21,
-  "latestVersionName": "0.11.1",
+  "version": "12",
+  "updatedAt": "2026-09-13T13:09:59.882529Z",
+  "latestVersionCode": 22,
+  "latestVersionName": "0.11.2",
   "forceUpdate": false,
-  "message": "SportNexa v0.11.1 is available. Update for the latest improvements and fixes.",
-  "updateUrl": "https://github.com/DaniyalTamaz/VideoGrabDownloader/releases/download/sportnexa-v0.11.1/SportNexa-v0.11.1.apk"
+  "message": "SportNexa v0.11.2 is available. Update for the latest improvements and fixes.",
+  "updateUrl": "https://github.com/DaniyalTamaz/VideoGrabDownloader/releases/download/sportnexa-v0.11.2/SportNexa-v0.11.2.apk"
 }
