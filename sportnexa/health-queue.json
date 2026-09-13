@@ -1,11 +1,11 @@
 {
   "version": "1",
-  "queueId": "1789288385797-vc07exp",
-  "createdAt": "2026-09-13T08:33:05.797Z",
+  "queueId": "1789288501536-q439l54",
+  "createdAt": "2026-09-13T08:35:01.536Z",
   "streams": [
     {
-      "url": "https://liveeu-gcp.alkassdigital.net/alkass1-p/main.m3u8",
-      "name": "Alkass One"
+      "url": "http://103.250.28.74:8000/play/a019/index.m3u8",
+      "name": "PTV Sports"
     }
   ]
 }
