@@ -1,6 +1,6 @@
 {
-  "version": "18",
-  "updatedAt": "2026-09-13T10:20:00Z",
+  "version": "19",
+  "updatedAt": "2026-09-13T10:36:00Z",
   "channels": [
     {
       "name": "SportNexa Classic — REMOTE UPDATE",
@@ -108,7 +108,7 @@
       "primaryUrl": "https://live.elheddaftv.com:8081/elheddaftv/index.m3u8",
       "backupUrl": "",
       "logo": "",
-      "enabled": false,
+      "enabled": true,
       "featured": false,
       "order": 11
     },
@@ -128,7 +128,7 @@
       "primaryUrl": "https://jrtv-live.ercdn.net/jordansporthd/jordansporthd.m3u8",
       "backupUrl": "",
       "logo": "",
-      "enabled": false,
+      "enabled": true,
       "featured": false,
       "order": 13
     },
@@ -148,7 +148,7 @@
       "primaryUrl": "https://5c7b683162943.streamlock.net/live/ngrp:bahrainsportstwo_all/playlist.m3u8",
       "backupUrl": "",
       "logo": "",
-      "enabled": false,
+      "enabled": true,
       "featured": false,
       "order": 15
     },
@@ -158,7 +158,7 @@
       "primaryUrl": "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/b17adfe543354fdd8d189b110617cddd/index.m3u8",
       "backupUrl": "",
       "logo": "",
-      "enabled": false,
+      "enabled": true,
       "featured": false,
       "order": 16
     },
