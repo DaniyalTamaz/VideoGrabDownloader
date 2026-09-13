@@ -1,6 +1,6 @@
 {
-  "version": "11",
-  "updatedAt": "2026-09-13T08:55:59.752Z",
+  "version": "12",
+  "updatedAt": "2026-09-13T08:59:00.606Z",
   "channels": [
     {
       "name": "SportNexa Classic — REMOTE UPDATE",
@@ -88,7 +88,7 @@
       "primaryUrl": "https://db34cc6127ac459db55cab5f97cd66b9.mediatailor.us-west-2.amazonaws.com/v1/master/ba62fe743df0fe93366eba3a257d792884136c7f/LINEAR-680-WORBAUENFAST-WHALETVPLUS/680/whaletvplus/hls/master/playlist.m3u8",
       "backupUrl": "",
       "logo": "https://images.pluto.tv/channels/5e7cb84a172a0f0007da69e4/colorLogoPNG.png",
-      "enabled": false,
+      "enabled": true,
       "featured": false,
       "order": 9
     },
