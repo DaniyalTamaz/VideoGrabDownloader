@@ -23,7 +23,7 @@ def fetch_json(name):
     req = urllib.request.Request(
         f"{API}/{name}.json",
         headers={
-            "User-Agent": "SportNexa-CatalogScanner/1.0",
+            "User-Agent": "SportNexa-CatalogScanner/1.1",
             "Accept": "application/json",
             "Accept-Encoding": "identity",
         },
@@ -128,6 +128,24 @@ def build_candidates(channels, feeds, streams, blocklist):
     return list(best.values())
 
 
+def normalized_terms(value):
+    if not isinstance(value, list):
+        return []
+    return [clean(x).casefold() for x in value if clean(x)]
+
+
+def candidate_haystack(candidate):
+    parts = [
+        candidate.get("channelId"),
+        candidate.get("name"),
+        candidate.get("title"),
+        candidate.get("label"),
+        candidate.get("website"),
+        " ".join(candidate.get("categories") or []),
+    ]
+    return " ".join(clean(x) for x in parts).casefold()
+
+
 def matches(candidate, preset):
     category = clean(preset.get("category"))
     country = clean(preset.get("country")).upper()
@@ -137,6 +155,14 @@ def matches(candidate, preset):
     if country and country not in candidate["countries"]:
         return False
     if language and language not in candidate["languages"]:
+        return False
+
+    haystack = candidate_haystack(candidate)
+    keywords = normalized_terms(preset.get("keywords"))
+    exclude_keywords = normalized_terms(preset.get("excludeKeywords"))
+    if keywords and not any(term in haystack for term in keywords):
+        return False
+    if exclude_keywords and any(term in haystack for term in exclude_keywords):
         return False
     return True
 
@@ -162,7 +188,7 @@ def main():
     for preset in presets:
         pool = [c for c in candidates if matches(c, preset)]
         pool.sort(key=lambda c: (-c["score"], c["name"].casefold()))
-        limit = max(1, min(60, int(preset.get("limit") or DEFAULT_LIMIT)))
+        limit = max(1, min(80, int(preset.get("limit") or DEFAULT_LIMIT)))
         chosen = pool[:limit]
         selected_by_preset.append((preset, len(pool), chosen))
         for item in chosen:
@@ -202,6 +228,8 @@ def main():
                 "category": clean(preset.get("category")),
                 "country": clean(preset.get("country")).upper(),
                 "language": clean(preset.get("language")),
+                "keywords": normalized_terms(preset.get("keywords")),
+                "excludeKeywords": normalized_terms(preset.get("excludeKeywords")),
             },
             "candidateCount": candidate_count,
             "testedCount": len(chosen),
@@ -210,7 +238,7 @@ def main():
         })
 
     payload = {
-        "version": "1",
+        "version": "2",
         "scanId": clean(request.get("scanId")),
         "requestedAt": clean(request.get("createdAt")),
         "testedAt": utc_now(),
