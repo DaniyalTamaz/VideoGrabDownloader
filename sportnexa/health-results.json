@@ -1,25 +1,25 @@
 {
   "version": "1",
-  "queueId": "1789288385797-vc07exp",
-  "requestedAt": "2026-09-13T08:33:05.797Z",
-  "testedAt": "2026-09-13T08:32:02.522596Z",
+  "queueId": "1789288501536-q439l54",
+  "requestedAt": "2026-09-13T08:35:01.536Z",
+  "testedAt": "2026-09-13T08:34:10.046380Z",
   "runnerRegionNote": "Tested from a GitHub-hosted cloud runner. Geo-restricted results can differ on the user device.",
   "counts": {
-    "restricted": 1
+    "timeout": 1
   },
   "results": [
     {
-      "url": "https://liveeu-gcp.alkassdigital.net/alkass1-p/main.m3u8",
-      "name": "Alkass One",
-      "status": "restricted",
-      "httpStatus": 403,
+      "url": "http://103.250.28.74:8000/play/a019/index.m3u8",
+      "name": "PTV Sports",
+      "status": "timeout",
+      "httpStatus": null,
       "format": "",
-      "latencyMs": 61,
+      "latencyMs": 12034,
       "contentType": "",
-      "finalUrl": "https://liveeu-gcp.alkassdigital.net/alkass1-p/main.m3u8",
+      "finalUrl": "",
       "bytesRead": 0,
-      "message": "HTTP 403",
-      "checkedAt": "2026-09-13T08:32:02.460877Z"
+      "message": "Timed out after 12s",
+      "checkedAt": "2026-09-13T08:33:58.011320Z"
     }
   ]
 }
