@@ -1,6 +1,6 @@
 {
-  "version": "17",
-  "updatedAt": "2026-09-13T10:15:00Z",
+  "version": "18",
+  "updatedAt": "2026-09-13T10:20:00Z",
   "channels": [
     {
       "name": "SportNexa Classic — REMOTE UPDATE",
@@ -148,7 +148,7 @@
       "primaryUrl": "https://5c7b683162943.streamlock.net/live/ngrp:bahrainsportstwo_all/playlist.m3u8",
       "backupUrl": "",
       "logo": "",
-      "enabled": true,
+      "enabled": false,
       "featured": false,
       "order": 15
     },
