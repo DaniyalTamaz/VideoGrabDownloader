@@ -1,37 +1,7 @@
 {
-  "version": "22",
-  "updatedAt": "2026-09-13T10:57:00Z",
+  "version": "23",
+  "updatedAt": "2026-09-13T11:34:00Z",
   "channels": [
-    {
-      "name": "SportNexa Classic — REMOTE UPDATE",
-      "category": "Remote Test",
-      "primaryUrl": "https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_4x3/bipbop_4x3_variant.m3u8",
-      "backupUrl": "https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_16x9/bipbop_16x9_variant.m3u8",
-      "logo": "",
-      "enabled": true,
-      "featured": true,
-      "order": 1
-    },
-    {
-      "name": "SportNexa Remote HD",
-      "category": "Demo",
-      "primaryUrl": "https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_16x9/bipbop_16x9_variant.m3u8",
-      "backupUrl": "https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_4x3/bipbop_4x3_variant.m3u8",
-      "logo": "",
-      "enabled": true,
-      "featured": false,
-      "order": 2
-    },
-    {
-      "name": "Hidden Remote Example",
-      "category": "Demo",
-      "primaryUrl": "https://example.com/disabled/master.m3u8",
-      "backupUrl": "",
-      "logo": "",
-      "enabled": false,
-      "featured": false,
-      "order": 3
-    },
     {
       "name": "Al Iraqia Sport",
       "category": "Sports",
@@ -40,7 +10,7 @@
       "logo": "https://i.imgur.com/DrrlxTO.png",
       "enabled": false,
       "featured": false,
-      "order": 4
+      "order": 1
     },
     {
       "name": "Alkass Four",
@@ -50,7 +20,7 @@
       "logo": "https://i.imgur.com/iDL65Wu.png",
       "enabled": false,
       "featured": false,
-      "order": 5
+      "order": 2
     },
     {
       "name": "Alkass One",
@@ -60,7 +30,7 @@
       "logo": "https://i.imgur.com/10mmlha.png",
       "enabled": false,
       "featured": false,
-      "order": 6
+      "order": 3
     },
     {
       "name": "Alkass SHOOF",
@@ -70,7 +40,7 @@
       "logo": "https://shoof.alkass.net/assets/images/shoof.png",
       "enabled": false,
       "featured": false,
-      "order": 7
+      "order": 4
     },
     {
       "name": "Alkass SHOOF 2",
@@ -80,7 +50,7 @@
       "logo": "https://shoof.alkass.net/assets/images/shoof2.png",
       "enabled": false,
       "featured": false,
-      "order": 8
+      "order": 5
     },
     {
       "name": "Red Bull TV",
@@ -90,7 +60,7 @@
       "logo": "https://images.pluto.tv/channels/5e7cb84a172a0f0007da69e4/colorLogoPNG.png",
       "enabled": true,
       "featured": false,
-      "order": 9
+      "order": 6
     },
     {
       "name": "M Sports",
@@ -100,7 +70,7 @@
       "logo": "https://msports.pk/wp-content/uploads/2026/02/m-sports-300.png",
       "enabled": true,
       "featured": false,
-      "order": 10
+      "order": 7
     },
     {
       "name": "El-Heddaf TV",
@@ -110,7 +80,7 @@
       "logo": "",
       "enabled": true,
       "featured": false,
-      "order": 11
+      "order": 8
     },
     {
       "name": "KTV Sport",
@@ -120,7 +90,7 @@
       "logo": "",
       "enabled": true,
       "featured": false,
-      "order": 12
+      "order": 9
     },
     {
       "name": "Jordan Sport",
@@ -130,7 +100,7 @@
       "logo": "",
       "enabled": true,
       "featured": false,
-      "order": 13
+      "order": 10
     },
     {
       "name": "Bahrain Sports 1",
@@ -140,7 +110,7 @@
       "logo": "",
       "enabled": true,
       "featured": false,
-      "order": 14
+      "order": 11
     },
     {
       "name": "Bahrain Sports 2",
@@ -150,7 +120,7 @@
       "logo": "",
       "enabled": true,
       "featured": false,
-      "order": 15
+      "order": 12
     },
     {
       "name": "DD Sports",
@@ -160,7 +130,7 @@
       "logo": "",
       "enabled": true,
       "featured": false,
-      "order": 16
+      "order": 13
     },
     {
       "name": "Al Ekhbariya",
@@ -170,7 +140,7 @@
       "logo": "",
       "enabled": true,
       "featured": false,
-      "order": 17
+      "order": 14
     },
     {
       "name": "Al Hadath",
@@ -180,7 +150,7 @@
       "logo": "",
       "enabled": true,
       "featured": false,
-      "order": 18
+      "order": 15
     },
     {
       "name": "Al Jazeera",
@@ -190,7 +160,7 @@
       "logo": "",
       "enabled": true,
       "featured": false,
-      "order": 19
+      "order": 16
     },
     {
       "name": "Al Jazeera Mubasher",
@@ -200,7 +170,7 @@
       "logo": "",
       "enabled": true,
       "featured": false,
-      "order": 20
+      "order": 17
     },
     {
       "name": "Sky News Arabia Vertical",
@@ -210,7 +180,7 @@
       "logo": "",
       "enabled": true,
       "featured": false,
-      "order": 21
+      "order": 18
     },
     {
       "name": "KTV News",
@@ -220,7 +190,7 @@
       "logo": "",
       "enabled": true,
       "featured": false,
-      "order": 22
+      "order": 19
     },
     {
       "name": "Al Araby TV",
@@ -230,7 +200,7 @@
       "logo": "",
       "enabled": true,
       "featured": false,
-      "order": 23
+      "order": 20
     },
     {
       "name": "Kurdsat",
@@ -240,7 +210,7 @@
       "logo": "",
       "enabled": true,
       "featured": false,
-      "order": 24
+      "order": 21
     },
     {
       "name": "Ritmu TV",
@@ -250,7 +220,7 @@
       "logo": "",
       "enabled": true,
       "featured": false,
-      "order": 25
+      "order": 22
     }
   ]
 }
