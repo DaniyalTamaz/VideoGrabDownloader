@@ -1,6 +1,6 @@
 {
-  "version": "4",
-  "updatedAt": "2026-09-13T07:41:02.674Z",
+  "version": "5",
+  "updatedAt": "2026-09-13T08:03:30.353Z",
   "channels": [
     {
       "name": "SportNexa Classic — REMOTE UPDATE",
@@ -58,7 +58,7 @@
       "primaryUrl": "https://liveeu-gcp.alkassdigital.net/alkass1-p/main.m3u8",
       "backupUrl": "",
       "logo": "https://i.imgur.com/10mmlha.png",
-      "enabled": true,
+      "enabled": false,
       "featured": false,
       "order": 6
     },
