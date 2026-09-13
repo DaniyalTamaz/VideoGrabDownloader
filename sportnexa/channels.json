@@ -1,6 +1,6 @@
 {
-  "version": "13",
-  "updatedAt": "2026-09-13T09:37:15Z",
+  "version": "14",
+  "updatedAt": "2026-09-13T10:10:00Z",
   "channels": [
     {
       "name": "SportNexa Classic — REMOTE UPDATE",
@@ -118,7 +118,7 @@
       "primaryUrl": "https://kwtspta.cdn.mangomolo.com/sp/smil:sp.stream.smil/chunklist.m3u8",
       "backupUrl": "",
       "logo": "",
-      "enabled": false,
+      "enabled": true,
       "featured": false,
       "order": 12
     },
