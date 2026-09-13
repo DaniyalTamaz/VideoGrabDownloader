@@ -1,0 +1,35 @@
+{
+  "version": "1",
+  "scanId": "production-pack-20260913-1",
+  "createdAt": "2026-09-13T09:10:00Z",
+  "presets": [
+    {
+      "id": "arabic-sports",
+      "label": "Arabic Sports",
+      "category": "sports",
+      "language": "ara",
+      "limit": 30
+    },
+    {
+      "id": "india-sports",
+      "label": "India Sports",
+      "category": "sports",
+      "country": "IN",
+      "limit": 30
+    },
+    {
+      "id": "arabic-news",
+      "label": "Arabic News",
+      "category": "news",
+      "language": "ara",
+      "limit": 30
+    },
+    {
+      "id": "arabic-entertainment",
+      "label": "Arabic Entertainment",
+      "category": "entertainment",
+      "language": "ara",
+      "limit": 30
+    }
+  ]
+}
