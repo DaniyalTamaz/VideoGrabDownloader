@@ -40,5 +40,21 @@ jobs:
             exit 0
           fi
           git commit -m "Update SportNexa stream health results"
-          git pull --rebase origin "${GITHUB_REF_NAME:-main}"
-          git push origin "HEAD:${GITHUB_REF_NAME:-main}"
+
+          branch="${GITHUB_REF_NAME:-main}"
+          for attempt in 1 2 3 4; do
+            echo "Publish attempt ${attempt}/4"
+            if git pull --rebase origin "$branch" && git push origin "HEAD:$branch"; then
+              echo "Health results published successfully."
+              exit 0
+            fi
+
+            if [ "$attempt" -lt 4 ]; then
+              delay=$((attempt * 10))
+              echo "Publish failed; retrying in ${delay}s..."
+              sleep "$delay"
+            fi
+          done
+
+          echo "Health result publish failed after 4 attempts."
+          exit 1
