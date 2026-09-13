@@ -12,7 +12,7 @@
     <header class="topbar">
       <div class="brand">
         <h1>SportNexa IPTV Importer</h1>
-        <p>Discover IPTV-org candidates, review them, and stage approved streams into SportNexa.</p>
+        <p>Discover IPTV-org candidates, test stream health, review sources, and stage approved streams into SportNexa.</p>
       </div>
       <div class="actions">
         <button class="btn" onclick="location.href='./index.html'">Channel Admin</button>
@@ -23,7 +23,7 @@
     </header>
 
     <section class="notice warning-box">
-      <strong>Production safety rule:</strong> an IPTV-org listing is a discovery lead, not proof that SportNexa may redistribute or embed that channel. Verify the broadcaster's terms before enabling a channel. New imports are <strong>Disabled</strong> by default.
+      <strong>Production safety rule:</strong> an IPTV-org listing or a successful health test is a technical signal, not proof that SportNexa may redistribute or embed that channel. Verify the broadcaster's terms before enabling a channel. New imports are <strong>Disabled</strong> by default.
     </section>
 
     <section class="stats importer-stats">
@@ -97,13 +97,22 @@
           <label class="mini-check"><input id="bestOnly" type="checkbox" checked> Best stream per channel</label>
           <label class="mini-check"><input id="hideHeaders" type="checkbox" checked> Hide streams requiring custom headers</label>
           <label class="mini-check"><input id="hideGeo" type="checkbox"> Hide geo-labelled streams</label>
+          <label class="mini-check health-only"><input id="workingOnly" type="checkbox"> Working Only</label>
         </div>
 
         <div class="selection-actions">
           <button class="btn" id="selectVisibleBtn">Select visible</button>
           <button class="btn" id="clearSelectionBtn">Clear selection</button>
-          <span class="muted">Blocked/NSFW channels are always excluded. Header-dependent streams are hidden by default because the current SportNexa channel model does not store per-stream Referer/User-Agent headers.</span>
+          <button class="btn health-action" id="testSelectedBtn">Test Selected</button>
+          <button class="btn health-action" id="testVisibleBtn">Test Visible (max 25)</button>
+          <button class="btn" id="reloadHealthBtn">Reload Health</button>
         </div>
+        <div class="health-box">
+          <div class="status" id="healthStatus">No stream health test running.</div>
+          <div class="muted" id="healthSummary">0 working • 0 tested in current list</div>
+          <div class="health-note">Tests run from a GitHub-hosted cloud runner. A 403/451 or timeout can be caused by geo-restriction and may differ on your phone in Saudi Arabia. A green Working result means the runner received a valid HLS/DASH manifest; it does not establish distribution rights.</div>
+        </div>
+        <div class="selection-note">Blocked/NSFW channels remain excluded. Header-dependent streams are hidden by default because the current SportNexa channel model does not store per-stream Referer/User-Agent headers.</div>
       </div>
     </section>
 
@@ -112,7 +121,7 @@
         <div class="panel-head">
           <div>
             <h2>IPTV-org candidates</h2>
-            <div class="muted">Review source metadata before importing. Up to 300 filtered rows are rendered at once.</div>
+            <div class="muted">Use <strong>Test Stream</strong> on one row, or select several channels and use <strong>Test Selected</strong>. Up to 300 filtered rows are rendered at once.</div>
           </div>
         </div>
         <div class="candidate-list" id="candidateList">
@@ -126,11 +135,12 @@
           <p class="muted-copy">Selected candidates are merged into the live <code>sportnexa/channels.json</code>. Existing channels are preserved and duplicate primary URLs are skipped.</p>
 
           <label class="check"><input id="enableImmediately" type="checkbox"> Enable selected channels immediately</label>
-          <div class="help warning-text">Recommended: leave this OFF. First import candidates as Disabled, review them in Channel Admin, verify broadcaster authorization and playback, then enable only approved channels.</div>
+          <div class="help warning-text">Recommended: leave this OFF. First test the stream, import as Disabled, review broadcaster authorization and playback, then enable only approved channels.</div>
 
           <div class="field token-field">
             <label>Fine-grained GitHub token</label>
-            <input id="tokenField" type="password" autocomplete="off" placeholder="Token with Contents: Read and write for VideoGrabDownloader">
+            <input id="tokenField" type="password" autocomplete="off" placeholder="Contents: Read and write for VideoGrabDownloader">
+            <div class="help">The same restricted token is used to queue health tests and publish imports. It stays only in this browser session and is not stored by the page.</div>
           </div>
 
           <button class="btn primary wide" id="publishSelectedBtn">Import Selected to SportNexa</button>
@@ -153,9 +163,10 @@
       </div>
     </section>
 
-    <footer>SportNexa Production Importer • IPTV-org data is used for discovery and metadata filtering only.</footer>
+    <footer>SportNexa Production Importer • IPTV-org is used for discovery; stream health and rights approval are separate checks.</footer>
   </main>
   <script src="./iptv-importer.js"></script>
+  <script src="./iptv-health.js"></script>
   <script src="./iptv-metadata-fallback.js"></script>
 </body>
 </html>
