@@ -1,6 +1,6 @@
 {
-  "version": "12",
-  "updatedAt": "2026-09-13T08:59:00.606Z",
+  "version": "13",
+  "updatedAt": "2026-09-13T09:37:15Z",
   "channels": [
     {
       "name": "SportNexa Classic — REMOTE UPDATE",
@@ -101,6 +101,156 @@
       "enabled": true,
       "featured": false,
       "order": 10
+    },
+    {
+      "name": "El-Heddaf TV",
+      "category": "Sports",
+      "primaryUrl": "https://live.elheddaftv.com:8081/elheddaftv/index.m3u8",
+      "backupUrl": "",
+      "logo": "",
+      "enabled": false,
+      "featured": false,
+      "order": 11
+    },
+    {
+      "name": "KTV Sport",
+      "category": "Sports",
+      "primaryUrl": "https://kwtspta.cdn.mangomolo.com/sp/smil:sp.stream.smil/chunklist.m3u8",
+      "backupUrl": "",
+      "logo": "",
+      "enabled": false,
+      "featured": false,
+      "order": 12
+    },
+    {
+      "name": "Jordan Sport",
+      "category": "Sports",
+      "primaryUrl": "https://jrtv-live.ercdn.net/jordansporthd/jordansporthd.m3u8",
+      "backupUrl": "",
+      "logo": "",
+      "enabled": false,
+      "featured": false,
+      "order": 13
+    },
+    {
+      "name": "Bahrain Sports 1",
+      "category": "Sports",
+      "primaryUrl": "https://5c7b683162943.streamlock.net/live/ngrp:sportsone_all/playlist.m3u8",
+      "backupUrl": "",
+      "logo": "",
+      "enabled": false,
+      "featured": false,
+      "order": 14
+    },
+    {
+      "name": "Bahrain Sports 2",
+      "category": "Sports",
+      "primaryUrl": "https://5c7b683162943.streamlock.net/live/ngrp:bahrainsportstwo_all/playlist.m3u8",
+      "backupUrl": "",
+      "logo": "",
+      "enabled": false,
+      "featured": false,
+      "order": 15
+    },
+    {
+      "name": "DD Sports",
+      "category": "Sports",
+      "primaryUrl": "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/b17adfe543354fdd8d189b110617cddd/index.m3u8",
+      "backupUrl": "",
+      "logo": "",
+      "enabled": false,
+      "featured": false,
+      "order": 16
+    },
+    {
+      "name": "Al Ekhbariya",
+      "category": "News",
+      "primaryUrl": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-al-ekhbaria/297b3ef1cd0633ad9cfba7473a686a06/index.m3u8",
+      "backupUrl": "",
+      "logo": "",
+      "enabled": false,
+      "featured": false,
+      "order": 17
+    },
+    {
+      "name": "Al Hadath",
+      "category": "News",
+      "primaryUrl": "https://av.alarabiya.net/alarabiapublish/alhadath.smil/playlist.m3u8",
+      "backupUrl": "",
+      "logo": "",
+      "enabled": false,
+      "featured": false,
+      "order": 18
+    },
+    {
+      "name": "Al Jazeera",
+      "category": "News",
+      "primaryUrl": "https://live-hls-apps-aja-fa.getaj.net/AJA/01.m3u8",
+      "backupUrl": "",
+      "logo": "",
+      "enabled": false,
+      "featured": false,
+      "order": 19
+    },
+    {
+      "name": "Al Jazeera Mubasher",
+      "category": "News",
+      "primaryUrl": "https://live-hls-apps-ajm-fa.getaj.net/AJM/index.m3u8",
+      "backupUrl": "",
+      "logo": "",
+      "enabled": false,
+      "featured": false,
+      "order": 20
+    },
+    {
+      "name": "Sky News Arabia Vertical",
+      "category": "News",
+      "primaryUrl": "https://stream.skynewsarabia.com/vertical/vertical.m3u8",
+      "backupUrl": "",
+      "logo": "",
+      "enabled": false,
+      "featured": false,
+      "order": 21
+    },
+    {
+      "name": "KTV News",
+      "category": "News",
+      "primaryUrl": "https://kwtkbta.cdn.mangomolo.com/kb/smil:kb.stream.smil/chunklist.m3u8",
+      "backupUrl": "",
+      "logo": "",
+      "enabled": false,
+      "featured": false,
+      "order": 22
+    },
+    {
+      "name": "Al Araby TV",
+      "category": "News",
+      "primaryUrl": "https://live.kwikmotion.com/alaraby1live/alaraby_abr/playlist.m3u8",
+      "backupUrl": "",
+      "logo": "",
+      "enabled": false,
+      "featured": false,
+      "order": 23
+    },
+    {
+      "name": "Kurdsat",
+      "category": "Entertainment",
+      "primaryUrl": "https://hlspackager.akamaized.net/live/DB/KURDSAT_HD/HLS/KURDSAT_HD.m3u8",
+      "backupUrl": "",
+      "logo": "",
+      "enabled": false,
+      "featured": false,
+      "order": 24
+    },
+    {
+      "name": "Ritmu TV",
+      "category": "Entertainment",
+      "primaryUrl": "https://659605a54e9a6.streamlock.net:8443/live/livestream/playlist.m3u8",
+      "backupUrl": "",
+      "logo": "",
+      "enabled": false,
+      "featured": false,
+      "order": 25
     }
   ]
 }
