@@ -1,35 +1,62 @@
 {
-  "version": "1",
-  "scanId": "production-pack-20260913-1",
-  "createdAt": "2026-09-13T09:10:00Z",
+  "version": "2",
+  "scanId": "sports-expansion-20260913-1",
+  "createdAt": "2026-09-13T12:05:00Z",
   "presets": [
+    {
+      "id": "global-sports",
+      "label": "Global Sports",
+      "category": "sports",
+      "limit": 80
+    },
+    {
+      "id": "football",
+      "label": "Football / Soccer",
+      "category": "sports",
+      "keywords": ["football", "soccer", "fifa", "futbol", "fútbol", "calcio"],
+      "limit": 80
+    },
+    {
+      "id": "cricket",
+      "label": "Cricket",
+      "category": "sports",
+      "keywords": ["cricket", "cric", "wicket", "pcb", "icc"],
+      "limit": 80
+    },
+    {
+      "id": "motorsport",
+      "label": "Motorsport / Racing",
+      "category": "sports",
+      "keywords": ["motorsport", "motor sport", "racing", "formula", "f1", "moto", "auto sport", "autosport"],
+      "limit": 80
+    },
+    {
+      "id": "combat",
+      "label": "Combat Sports",
+      "category": "sports",
+      "keywords": ["boxing", "mma", "ufc", "fight", "kickbox", "combat"],
+      "limit": 80
+    },
+    {
+      "id": "wrestling",
+      "label": "Wrestling",
+      "category": "sports",
+      "keywords": ["wwe", "wrestling", "wrestle"],
+      "limit": 80
+    },
+    {
+      "id": "pakistan-sports",
+      "label": "Pakistan Sports",
+      "category": "sports",
+      "country": "PK",
+      "limit": 60
+    },
     {
       "id": "arabic-sports",
       "label": "Arabic Sports",
       "category": "sports",
       "language": "ara",
-      "limit": 30
-    },
-    {
-      "id": "india-sports",
-      "label": "India Sports",
-      "category": "sports",
-      "country": "IN",
-      "limit": 30
-    },
-    {
-      "id": "arabic-news",
-      "label": "Arabic News",
-      "category": "news",
-      "language": "ara",
-      "limit": 30
-    },
-    {
-      "id": "arabic-entertainment",
-      "label": "Arabic Entertainment",
-      "category": "entertainment",
-      "language": "ara",
-      "limit": 30
+      "limit": 60
     }
   ]
 }
