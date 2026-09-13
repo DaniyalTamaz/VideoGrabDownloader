@@ -1,11 +1,27 @@
 {
   "version": "1",
-  "queueId": "1789288501536-q439l54",
-  "createdAt": "2026-09-13T08:35:01.536Z",
+  "queueId": "1789289121525-839q0dx",
+  "createdAt": "2026-09-13T08:45:21.525Z",
   "streams": [
+    {
+      "url": "https://cdn.rabta.stream/M-Sports/index.m3u8",
+      "name": "M Sports"
+    },
+    {
+      "url": "http://162.250.201.58:6211/pk/ONEGOLF/index.m3u8",
+      "name": "One Golf"
+    },
+    {
+      "url": "https://lbgo.bozztv.com/ssh101/ssh101/pksportshd/playlist.m3u8",
+      "name": "PK Sports"
+    },
     {
       "url": "http://103.250.28.74:8000/play/a019/index.m3u8",
       "name": "PTV Sports"
+    },
+    {
+      "url": "http://121.91.61.106:8000/play/a04h/index.m3u8",
+      "name": "Ten Sports Pakistan"
     }
   ]
 }
