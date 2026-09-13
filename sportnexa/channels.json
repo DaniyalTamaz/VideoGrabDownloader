@@ -1,6 +1,6 @@
 {
-  "version": "19",
-  "updatedAt": "2026-09-13T10:36:00Z",
+  "version": "20",
+  "updatedAt": "2026-09-13T10:42:00Z",
   "channels": [
     {
       "name": "SportNexa Classic — REMOTE UPDATE",
@@ -168,7 +168,7 @@
       "primaryUrl": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-al-ekhbaria/297b3ef1cd0633ad9cfba7473a686a06/index.m3u8",
       "backupUrl": "",
       "logo": "",
-      "enabled": false,
+      "enabled": true,
       "featured": false,
       "order": 17
     },
@@ -178,7 +178,7 @@
       "primaryUrl": "https://av.alarabiya.net/alarabiapublish/alhadath.smil/playlist.m3u8",
       "backupUrl": "",
       "logo": "",
-      "enabled": false,
+      "enabled": true,
       "featured": false,
       "order": 18
     },
@@ -188,7 +188,7 @@
       "primaryUrl": "https://live-hls-apps-aja-fa.getaj.net/AJA/01.m3u8",
       "backupUrl": "",
       "logo": "",
-      "enabled": false,
+      "enabled": true,
       "featured": false,
       "order": 19
     },
@@ -198,7 +198,7 @@
       "primaryUrl": "https://live-hls-apps-ajm-fa.getaj.net/AJM/index.m3u8",
       "backupUrl": "",
       "logo": "",
-      "enabled": false,
+      "enabled": true,
       "featured": false,
       "order": 20
     },
@@ -208,7 +208,7 @@
       "primaryUrl": "https://stream.skynewsarabia.com/vertical/vertical.m3u8",
       "backupUrl": "",
       "logo": "",
-      "enabled": false,
+      "enabled": true,
       "featured": false,
       "order": 21
     },
@@ -218,7 +218,7 @@
       "primaryUrl": "https://kwtkbta.cdn.mangomolo.com/kb/smil:kb.stream.smil/chunklist.m3u8",
       "backupUrl": "",
       "logo": "",
-      "enabled": false,
+      "enabled": true,
       "featured": false,
       "order": 22
     },
@@ -228,7 +228,7 @@
       "primaryUrl": "https://live.kwikmotion.com/alaraby1live/alaraby_abr/playlist.m3u8",
       "backupUrl": "",
       "logo": "",
-      "enabled": false,
+      "enabled": true,
       "featured": false,
       "order": 23
     },
