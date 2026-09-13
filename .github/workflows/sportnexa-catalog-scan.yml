@@ -1,0 +1,59 @@
+name: SportNexa Production Catalog Scan
+
+on:
+  push:
+    paths:
+      - 'sportnexa/catalog-scan-request.json'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sportnexa-catalog-scan
+  cancel-in-progress: true
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Scan IPTV-org production candidates
+        run: python sportnexa/tools/scan_iptv_catalog.py sportnexa/catalog-scan-request.json sportnexa/catalog-scan-results.json
+
+      - name: Publish catalog scan results
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add sportnexa/catalog-scan-results.json
+          if git diff --cached --quiet; then
+            echo "No catalog scan result changes to publish."
+            exit 0
+          fi
+          git commit -m "Update SportNexa production catalog scan"
+
+          branch="${GITHUB_REF_NAME:-main}"
+          for attempt in 1 2 3 4; do
+            echo "Publish attempt ${attempt}/4"
+            if git pull --rebase origin "$branch" && git push origin "HEAD:$branch"; then
+              echo "Catalog scan results published successfully."
+              exit 0
+            fi
+            if [ "$attempt" -lt 4 ]; then
+              delay=$((attempt * 10))
+              echo "Publish failed; retrying in ${delay}s..."
+              sleep "$delay"
+            fi
+          done
+
+          echo "Catalog scan result publish failed after 4 attempts."
+          exit 1
