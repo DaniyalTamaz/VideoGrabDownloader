@@ -1,6 +1,6 @@
 {
-  "version": "14",
-  "updatedAt": "2026-09-13T10:10:00Z",
+  "version": "15",
+  "updatedAt": "2026-09-13T10:11:00Z",
   "channels": [
     {
       "name": "SportNexa Classic — REMOTE UPDATE",
@@ -128,7 +128,7 @@
       "primaryUrl": "https://jrtv-live.ercdn.net/jordansporthd/jordansporthd.m3u8",
       "backupUrl": "",
       "logo": "",
-      "enabled": false,
+      "enabled": true,
       "featured": false,
       "order": 13
     },
