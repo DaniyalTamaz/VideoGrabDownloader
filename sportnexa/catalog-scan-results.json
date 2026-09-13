@@ -1,0 +1,2254 @@
+{
+  "version": "1",
+  "scanId": "production-pack-20260913-1",
+  "requestedAt": "2026-09-13T09:10:00Z",
+  "testedAt": "2026-09-13T09:37:15.219891Z",
+  "source": "IPTV-org public API",
+  "note": "Technical reachability only. A working result does not establish redistribution or embedding rights. Geo-restricted streams can differ on the user's device.",
+  "catalog": {
+    "channels": 31299,
+    "streams": 17245,
+    "eligibleBestPerChannel": 9213
+  },
+  "uniqueStreamsTested": 65,
+  "workingPresetHits": 46,
+  "presets": [
+    {
+      "id": "arabic-sports",
+      "label": "Arabic Sports",
+      "filters": {
+        "category": "sports",
+        "country": "",
+        "language": "ara"
+      },
+      "candidateCount": 18,
+      "testedCount": 18,
+      "counts": {
+        "restricted": 8,
+        "working": 7,
+        "http_ok": 2,
+        "dead": 1
+      },
+      "results": [
+        {
+          "channelId": "AlkassFour.qa",
+          "name": "Alkass Four",
+          "title": "Alkass Four",
+          "url": "https://liveeu-gcp.alkassdigital.net/alkass4-p/main.m3u8",
+          "format": "HLS",
+          "quality": "1080p",
+          "label": "",
+          "country": "QA",
+          "countries": [
+            "QA"
+          ],
+          "languages": [
+            "ara"
+          ],
+          "categories": [
+            "sports"
+          ],
+          "website": "https://www.alkass.net/",
+          "health": {
+            "url": "https://liveeu-gcp.alkassdigital.net/alkass4-p/main.m3u8",
+            "name": "Alkass Four",
+            "status": "restricted",
+            "httpStatus": 403,
+            "format": "",
+            "latencyMs": 118,
+            "contentType": "",
+            "finalUrl": "https://liveeu-gcp.alkassdigital.net/alkass4-p/main.m3u8",
+            "bytesRead": 0,
+            "message": "HTTP 403",
+            "checkedAt": "2026-09-13T09:37:01.722279Z"
+          }
+        },
+        {
+          "channelId": "AlkassOne.qa",
+          "name": "Alkass One",
+          "title": "Alkass One",
+          "url": "https://liveeu-gcp.alkassdigital.net/alkass1-p/main.m3u8",
+          "format": "HLS",
+          "quality": "1080p",
+          "label": "",
+          "country": "QA",
+          "countries": [
+            "QA"
+          ],
+          "languages": [
+            "ara"
+          ],
+          "categories": [
+            "sports"
+          ],
+          "website": "https://www.alkass.net/",
+          "health": {
+            "url": "https://liveeu-gcp.alkassdigital.net/alkass1-p/main.m3u8",
+            "name": "Alkass One",
+            "status": "restricted",
+            "httpStatus": 403,
+            "format": "",
+            "latencyMs": 116,
+            "contentType": "",
+            "finalUrl": "https://liveeu-gcp.alkassdigital.net/alkass1-p/main.m3u8",
+            "bytesRead": 0,
+            "message": "HTTP 403",
+            "checkedAt": "2026-09-13T09:37:01.722535Z"
+          }
+        },
+        {
+          "channelId": "AlkassSHOOF.qa",
+          "name": "Alkass SHOOF",
+          "title": "Alkass SHOOF",
+          "url": "https://liveeu-gcp.alkassdigital.net/shooflive/main.m3u8",
+          "format": "HLS",
+          "quality": "1080p",
+          "label": "",
+          "country": "QA",
+          "countries": [
+            "QA"
+          ],
+          "languages": [
+            "ara"
+          ],
+          "categories": [
+            "sports"
+          ],
+          "website": "https://shoof.alkass.net/live?ch=shoof",
+          "health": {
+            "url": "https://liveeu-gcp.alkassdigital.net/shooflive/main.m3u8",
+            "name": "Alkass SHOOF",
+            "status": "restricted",
+            "httpStatus": 403,
+            "format": "",
+            "latencyMs": 122,
+            "contentType": "",
+            "finalUrl": "https://liveeu-gcp.alkassdigital.net/shooflive/main.m3u8",
+            "bytesRead": 0,
+            "message": "HTTP 403",
+            "checkedAt": "2026-09-13T09:37:01.722741Z"
+          }
+        },
+        {
+          "channelId": "AlkassSHOOF2.qa",
+          "name": "Alkass SHOOF 2",
+          "title": "Alkass SHOOF 2",
+          "url": "https://liveeu-gcp.alkassdigital.net/shooflive2/main.m3u8",
+          "format": "HLS",
+          "quality": "1080p",
+          "label": "",
+          "country": "QA",
+          "countries": [
+            "QA"
+          ],
+          "languages": [
+            "ara"
+          ],
+          "categories": [
+            "sports"
+          ],
+          "website": "https://www.alkass.net/",
+          "health": {
+            "url": "https://liveeu-gcp.alkassdigital.net/shooflive2/main.m3u8",
+            "name": "Alkass SHOOF 2",
+            "status": "restricted",
+            "httpStatus": 403,
+            "format": "",
+            "latencyMs": 115,
+            "contentType": "",
+            "finalUrl": "https://liveeu-gcp.alkassdigital.net/shooflive2/main.m3u8",
+            "bytesRead": 0,
+            "message": "HTTP 403",
+            "checkedAt": "2026-09-13T09:37:01.722927Z"
+          }
+        },
+        {
+          "channelId": "AlkassSix.qa",
+          "name": "Alkass Six",
+          "title": "Alkass Six",
+          "url": "https://liveeu-gcp.alkassdigital.net/alkass6-p/main.m3u8",
+          "format": "HLS",
+          "quality": "1080p",
+          "label": "",
+          "country": "QA",
+          "countries": [
+            "QA"
+          ],
+          "languages": [
+            "ara"
+          ],
+          "categories": [
+            "sports"
+          ],
+          "website": "https://www.alkass.net/",
+          "health": {
+            "url": "https://liveeu-gcp.alkassdigital.net/alkass6-p/main.m3u8",
+            "name": "Alkass Six",
+            "status": "restricted",
+            "httpStatus": 403,
+            "format": "",
+            "latencyMs": 116,
+            "contentType": "",
+            "finalUrl": "https://liveeu-gcp.alkassdigital.net/alkass6-p/main.m3u8",
+            "bytesRead": 0,
+            "message": "HTTP 403",
+            "checkedAt": "2026-09-13T09:37:01.723114Z"
+          }
+        },
+        {
+          "channelId": "AlkassThree.qa",
+          "name": "Alkass Three",
+          "title": "Alkass Three",
+          "url": "https://liveeu-gcp.alkassdigital.net/alkass3-p/main.m3u8",
+          "format": "HLS",
+          "quality": "1080p",
+          "label": "",
+          "country": "QA",
+          "countries": [
+            "QA"
+          ],
+          "languages": [
+            "ara"
+          ],
+          "categories": [
+            "sports"
+          ],
+          "website": "https://www.alkass.net/",
+          "health": {
+            "url": "https://liveeu-gcp.alkassdigital.net/alkass3-p/main.m3u8",
+            "name": "Alkass Three",
+            "status": "restricted",
+            "httpStatus": 403,
+            "format": "",
+            "latencyMs": 116,
+            "contentType": "",
+            "finalUrl": "https://liveeu-gcp.alkassdigital.net/alkass3-p/main.m3u8",
+            "bytesRead": 0,
+            "message": "HTTP 403",
+            "checkedAt": "2026-09-13T09:37:01.723329Z"
+          }
+        },
+        {
+          "channelId": "AlkassTwo.qa",
+          "name": "Alkass Two",
+          "title": "Alkass Two",
+          "url": "https://liveeu-gcp.alkassdigital.net/alkass2-p/main.m3u8",
+          "format": "HLS",
+          "quality": "1080p",
+          "label": "",
+          "country": "QA",
+          "countries": [
+            "QA"
+          ],
+          "languages": [
+            "ara"
+          ],
+          "categories": [
+            "sports"
+          ],
+          "website": "https://www.alkass.net/",
+          "health": {
+            "url": "https://liveeu-gcp.alkassdigital.net/alkass2-p/main.m3u8",
+            "name": "Alkass Two",
+            "status": "restricted",
+            "httpStatus": 403,
+            "format": "",
+            "latencyMs": 111,
+            "contentType": "",
+            "finalUrl": "https://liveeu-gcp.alkassdigital.net/alkass2-p/main.m3u8",
+            "bytesRead": 0,
+            "message": "HTTP 403",
+            "checkedAt": "2026-09-13T09:37:01.723545Z"
+          }
+        },
+        {
+          "channelId": "ElHeddafTV.dz",
+          "name": "El-Heddaf TV",
+          "title": "El-Heddaf TV",
+          "url": "https://live.elheddaftv.com:8081/elheddaftv/index.m3u8",
+          "format": "HLS",
+          "quality": "1080p",
+          "label": "",
+          "country": "DZ",
+          "countries": [
+            "DZ"
+          ],
+          "languages": [
+            "ara"
+          ],
+          "categories": [
+            "sports"
+          ],
+          "website": "https://www.elheddaf.com/",
+          "health": {
+            "url": "https://live.elheddaftv.com:8081/elheddaftv/index.m3u8",
+            "name": "El-Heddaf TV",
+            "status": "working",
+            "httpStatus": 200,
+            "format": "HLS",
+            "latencyMs": 604,
+            "contentType": "application/vnd.apple.mpegurl",
+            "finalUrl": "https://live.elheddaftv.com:8081/elheddaftv/index.m3u8",
+            "bytesRead": 183,
+            "message": "HLS manifest reachable",
+            "checkedAt": "2026-09-13T09:37:01.723684Z"
+          }
+        },
+        {
+          "channelId": "KTVSport.kw",
+          "name": "KTV Sport",
+          "title": "KTV Sport",
+          "url": "https://kwtspta.cdn.mangomolo.com/sp/smil:sp.stream.smil/chunklist.m3u8",
+          "format": "HLS",
+          "quality": "1080p",
+          "label": "",
+          "country": "KW",
+          "countries": [
+            "KW"
+          ],
+          "languages": [
+            "ara",
+            "eng"
+          ],
+          "categories": [
+            "sports"
+          ],
+          "website": "https://media.gov.kw/",
+          "health": {
+            "url": "https://kwtspta.cdn.mangomolo.com/sp/smil:sp.stream.smil/chunklist.m3u8",
+            "name": "KTV Sport",
+            "status": "working",
+            "httpStatus": 200,
+            "format": "HLS",
+            "latencyMs": 378,
+            "contentType": "application/vnd.apple.mpegurl",
+            "finalUrl": "https://kwtspta.cdn.mangomolo.com/sp/smil:sp.stream.smil/chunklist.m3u8",
+            "bytesRead": 437,
+            "message": "HLS manifest reachable",
+            "checkedAt": "2026-09-13T09:37:01.723875Z"
+          }
+        },
+        {
+          "channelId": "OmanSportsTV.om",
+          "name": "Oman Sports TV",
+          "title": "Oman Sports TV",
+          "url": "https://partneta.cdn.mgmlcdn.com/omsport/smil:omsport.stream.smil/chunklist.m3u8",
+          "format": "HLS",
+          "quality": "1080p",
+          "label": "",
+          "country": "OM",
+          "countries": [
+            "OM"
+          ],
+          "languages": [
+            "ara",
+            "eng"
+          ],
+          "categories": [
+            "sports"
+          ],
+          "website": "http://part.gov.om/omantvsport/",
+          "health": {
+            "url": "https://partneta.cdn.mgmlcdn.com/omsport/smil:omsport.stream.smil/chunklist.m3u8",
+            "name": "Oman Sports TV",
+            "status": "http_ok",
+            "httpStatus": 200,
+            "format": "",
+            "latencyMs": 551,
+            "contentType": "application/vnd.apple.mpegurl",
+            "finalUrl": "https://partneta.cdn.mgmlcdn.com/omsport/smil:omsport.stream.smil/chunklist.m3u8",
+            "bytesRead": 157,
+            "message": "HTTP response reachable, but HLS/DASH manifest was not detected",
+            "checkedAt": "2026-09-13T09:37:01.724178Z"
+          }
+        },
+        {
+          "channelId": "Prime.sy",
+          "name": "Prime",
+          "title": "Prime",
+          "url": "https://mn-nl.mncdn.com/primetv/live/index.m3u8",
+          "format": "HLS",
+          "quality": "1080p",
+          "label": "",
+          "country": "SY",
+          "countries": [
+            "SY"
+          ],
+          "languages": [
+            "ara"
+          ],
+          "categories": [
+            "general",
+            "sports"
+          ],
+          "website": "https://prime1tv.com/",
+          "health": {
+            "url": "https://mn-nl.mncdn.com/primetv/live/index.m3u8",
+            "name": "Prime",
+            "status": "working",
+            "httpStatus": 200,
+            "format": "HLS",
+            "latencyMs": 602,
+            "contentType": "application/vnd.apple.mpegurl",
+            "finalUrl": "https://mn-nl.mncdn.com/primetv/live/index.m3u8",
+            "bytesRead": 128,
+            "message": "HLS manifest reachable",
+            "checkedAt": "2026-09-13T09:37:01.724365Z"
+          }
+        },
+        {
+          "channelId": "SharjahSports.ae",
+          "name": "Sharjah Sports",
+          "title": "Sharjah Sports",
+          "url": "https://svs.itworkscdn.net/smc4sportslive/smc4tv.smil/playlist.m3u8",
+          "format": "HLS",
+          "quality": "1080p",
+          "label": "",
+          "country": "AE",
+          "countries": [
+            "AE"
+          ],
+          "languages": [
+            "ara",
+            "eng"
+          ],
+          "categories": [
+            "sports"
+          ],
+          "website": "https://sba.net.ae/ar/tv/channel/35",
+          "health": {
+            "url": "https://svs.itworkscdn.net/smc4sportslive/smc4tv.smil/playlist.m3u8",
+            "name": "Sharjah Sports",
+            "status": "restricted",
+            "httpStatus": 403,
+            "format": "",
+            "latencyMs": 104,
+            "contentType": "",
+            "finalUrl": "https://svs.itworkscdn.net/smc4sportslive/smc4tv.smil/playlist.m3u8",
+            "bytesRead": 0,
+            "message": "HTTP 403",
+            "checkedAt": "2026-09-13T09:37:01.724533Z"
+          }
+        },
+        {
+          "channelId": "JordanSport.jo",
+          "name": "Jordan Sport",
+          "title": "Jordan Sport",
+          "url": "https://jrtv-live.ercdn.net/jordansporthd/jordansporthd.m3u8",
+          "format": "HLS",
+          "quality": "1080p",
+          "label": "",
+          "country": "JO",
+          "countries": [
+            "JO"
+          ],
+          "languages": [
+            "ara"
+          ],
+          "categories": [
+            "sports"
+          ],
+          "website": "",
+          "health": {
+            "url": "https://jrtv-live.ercdn.net/jordansporthd/jordansporthd.m3u8",
+            "name": "Jordan Sport",
+            "status": "working",
+            "httpStatus": 200,
+            "format": "HLS",
+            "latencyMs": 766,
+            "contentType": "application/vnd.apple.mpegurl",
+            "finalUrl": "https://jrtv-live.ercdn.net/jordansporthd/jordansporthd.m3u8",
+            "bytesRead": 316,
+            "message": "HLS manifest reachable",
+            "checkedAt": "2026-09-13T09:37:01.724721Z"
+          }
+        },
+        {
+          "channelId": "KTVSportPlus.kw",
+          "name": "KTV Sport Plus",
+          "title": "KTV Sport Plus",
+          "url": "https://kwtsplta.cdn.mangomolo.com/spl/smil:spl.stream.smil/chunklist.m3u8",
+          "format": "HLS",
+          "quality": "1080p",
+          "label": "",
+          "country": "KW",
+          "countries": [
+            "KW"
+          ],
+          "languages": [
+            "ara"
+          ],
+          "categories": [
+            "sports"
+          ],
+          "website": "",
+          "health": {
+            "url": "https://kwtsplta.cdn.mangomolo.com/spl/smil:spl.stream.smil/chunklist.m3u8",
+            "name": "KTV Sport Plus",
+            "status": "http_ok",
+            "httpStatus": 200,
+            "format": "",
+            "latencyMs": 638,
+            "contentType": "application/vnd.apple.mpegurl",
+            "finalUrl": "https://kwtsplta.cdn.mangomolo.com/spl/smil:spl.stream.smil/chunklist.m3u8",
+            "bytesRead": 209,
+            "message": "HTTP response reachable, but HLS/DASH manifest was not detected",
+            "checkedAt": "2026-09-13T09:37:01.724877Z"
+          }
+        },
+        {
+          "channelId": "AlIraqiaSport.iq",
+          "name": "Al Iraqia Sport",
+          "title": "Al Iraqia Sport",
+          "url": "https://imn-live.esite-lab.com/hls/iraqia-sports-1.m3u8",
+          "format": "HLS",
+          "quality": "720p",
+          "label": "",
+          "country": "IQ",
+          "countries": [
+            "IQ"
+          ],
+          "languages": [
+            "ara"
+          ],
+          "categories": [
+            "sports"
+          ],
+          "website": "http://imn.iq/",
+          "health": {
+            "url": "https://imn-live.esite-lab.com/hls/iraqia-sports-1.m3u8",
+            "name": "Al Iraqia Sport",
+            "status": "dead",
+            "httpStatus": 404,
+            "format": "",
+            "latencyMs": 826,
+            "contentType": "",
+            "finalUrl": "https://imn-live.esite-lab.com/hls/iraqia-sports-1.m3u8",
+            "bytesRead": 0,
+            "message": "HTTP 404",
+            "checkedAt": "2026-09-13T09:37:01.725033Z"
+          }
+        },
+        {
+          "channelId": "BahrainSports1.bh",
+          "name": "Bahrain Sports 1",
+          "title": "Bahrain Sports 1",
+          "url": "https://5c7b683162943.streamlock.net/live/ngrp:sportsone_all/playlist.m3u8",
+          "format": "HLS",
+          "quality": "720p",
+          "label": "",
+          "country": "BH",
+          "countries": [
+            "BH"
+          ],
+          "languages": [
+            "ara"
+          ],
+          "categories": [
+            "sports"
+          ],
+          "website": "https://www.mia.gov.bh/media-center/live-tv-and-radio/?lang=en",
+          "health": {
+            "url": "https://5c7b683162943.streamlock.net/live/ngrp:sportsone_all/playlist.m3u8",
+            "name": "Bahrain Sports 1",
+            "status": "working",
+            "httpStatus": 200,
+            "format": "HLS",
+            "latencyMs": 926,
+            "contentType": "application/vnd.apple.mpegurl",
+            "finalUrl": "https://5c7b683162943.streamlock.net/live/ngrp:sportsone_all/playlist.m3u8",
+            "bytesRead": 269,
+            "message": "HLS manifest reachable",
+            "checkedAt": "2026-09-13T09:37:01.725230Z"
+          }
+        },
+        {
+          "channelId": "BahrainSports2.bh",
+          "name": "Bahrain Sports 2",
+          "title": "Bahrain Sports 2",
+          "url": "https://5c7b683162943.streamlock.net/live/ngrp:bahrainsportstwo_all/playlist.m3u8",
+          "format": "HLS",
+          "quality": "720p",
+          "label": "",
+          "country": "BH",
+          "countries": [
+            "BH"
+          ],
+          "languages": [
+            "ara"
+          ],
+          "categories": [
+            "sports"
+          ],
+          "website": "https://www.mia.gov.bh/media-center/live-tv-and-radio/?lang=en",
+          "health": {
+            "url": "https://5c7b683162943.streamlock.net/live/ngrp:bahrainsportstwo_all/playlist.m3u8",
+            "name": "Bahrain Sports 2",
+            "status": "working",
+            "httpStatus": 200,
+            "format": "HLS",
+            "latencyMs": 910,
+            "contentType": "application/vnd.apple.mpegurl",
+            "finalUrl": "https://5c7b683162943.streamlock.net/live/ngrp:bahrainsportstwo_all/playlist.m3u8",
+            "bytesRead": 269,
+            "message": "HLS manifest reachable",
+            "checkedAt": "2026-09-13T09:37:01.828891Z"
+          }
+        },
+        {
+          "channelId": "Arryadia.ma",
+          "name": "Arryadia",
+          "title": "Arryadia",
+          "url": "http://149.100.11.252:8000/play/a065/index.m3u8",
+          "format": "HLS",
+          "quality": "",
+          "label": "",
+          "country": "MA",
+          "countries": [
+            "MA"
+          ],
+          "languages": [
+            "ara"
+          ],
+          "categories": [
+            "sports"
+          ],
+          "website": "https://arryadia.snrt.ma/",
+          "health": {
+            "url": "http://149.100.11.252:8000/play/a065/index.m3u8",
+            "name": "Arryadia",
+            "status": "working",
+            "httpStatus": 200,
+            "format": "HLS",
+            "latencyMs": 288,
+            "contentType": "application/vnd.apple.mpegURL",
+            "finalUrl": "http://149.100.11.252:8000/play/a065/index.m3u8",
+            "bytesRead": 134,
+            "message": "HLS manifest reachable",
+            "checkedAt": "2026-09-13T09:37:01.834861Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "india-sports",
+      "label": "India Sports",
+      "filters": {
+        "category": "sports",
+        "country": "IN",
+        "language": ""
+      },
+      "candidateCount": 11,
+      "testedCount": 11,
+      "counts": {
+        "working": 9,
+        "dead": 1,
+        "restricted": 1
+      },
+      "results": [
+        {
+          "channelId": "DDSports.in",
+          "name": "DD Sports",
+          "title": "DD Sports SD",
+          "url": "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/b17adfe543354fdd8d189b110617cddd/index.m3u8",
+          "format": "HLS",
+          "quality": "1080p",
+          "label": "",
+          "country": "IN",
+          "countries": [
+            "IN"
+          ],
+          "languages": [
+            "hin"
+          ],
+          "categories": [
+            "sports"
+          ],
+          "website": "http://doordarshan.gov.in/ddsports",
+          "health": {
+            "url": "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/b17adfe543354fdd8d189b110617cddd/index.m3u8",
+            "name": "DD Sports",
+            "status": "working",
+            "httpStatus": 200,
+            "format": "HLS",
+            "latencyMs": 348,
+            "contentType": "application/x-mpegURL",
+            "finalUrl": "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/b17adfe543354fdd8d189b110617cddd/index.m3u8",
+            "bytesRead": 767,
+            "message": "HLS manifest reachable",
+            "checkedAt": "2026-09-13T09:37:01.838528Z"
+          }
+        },
+        {
+          "channelId": "SonySportsTen1.in",
+          "name": "Sony Sports Ten 1",
+          "title": "Sony Sports Ten 1 HD",
+          "url": "https://cloudplay-sonyliv.pages.dev/ten1hd.m3u8",
+          "format": "HLS",
+          "quality": "1080p",
+          "label": "",
+          "country": "IN",
+          "countries": [
+            "IN"
+          ],
+          "languages": [
+            "eng",
+            "mal"
+          ],
+          "categories": [
+            "sports"
+          ],
+          "website": "https://www.sonysportsnetwork.com/",
+          "health": {
+            "url": "https://cloudplay-sonyliv.pages.dev/ten1hd.m3u8",
+            "name": "Sony Sports Ten 1",
+            "status": "working",
+            "httpStatus": 200,
+            "format": "HLS",
+            "latencyMs": 91,
+            "contentType": "application/vnd.apple.mpegurl",
+            "finalUrl": "https://cloudplay-sonyliv.pages.dev/ten1hd.m3u8",
+            "bytesRead": 3931,
+            "message": "HLS manifest reachable",
+            "checkedAt": "2026-09-13T09:37:01.839221Z"
+          }
+        },
+        {
+          "channelId": "SonySportsTen2.in",
+          "name": "Sony Sports Ten 2",
+          "title": "Sony Sports Ten 2 HD",
+          "url": "https://cloudplay-sonyliv.pages.dev/ten2hd.m3u8",
+          "format": "HLS",
+          "quality": "1080p",
+          "label": "",
+          "country": "IN",
+          "countries": [
+            "IN"
+          ],
+          "languages": [
+            "eng"
+          ],
+          "categories": [
+            "sports"
+          ],
+          "website": "https://www.sonysportsnetwork.com/",
+          "health": {
+            "url": "https://cloudplay-sonyliv.pages.dev/ten2hd.m3u8",
+            "name": "Sony Sports Ten 2",
+            "status": "working",
+            "httpStatus": 200,
+            "format": "HLS",
+            "latencyMs": 88,
+            "contentType": "application/vnd.apple.mpegurl",
+            "finalUrl": "https://cloudplay-sonyliv.pages.dev/ten2hd.m3u8",
+            "bytesRead": 3931,
+            "message": "HLS manifest reachable",
+            "checkedAt": "2026-09-13T09:37:01.839585Z"
+          }
+        },
+        {
+          "channelId": "SonySportsTen3Hindi.in",
+          "name": "Sony Sports Ten 3 Hindi",
+          "title": "Sony Sports Ten 3 Hindi HD",
+          "url": "https://cloudplay-sonyliv.pages.dev/ten3hd.m3u8",
+          "format": "HLS",
+          "quality": "1080p",
+          "label": "",
+          "country": "IN",
+          "countries": [
+            "IN"
+          ],
+          "languages": [
+            "hin"
+          ],
+          "categories": [
+            "sports"
+          ],
+          "website": "https://www.sonysportsnetwork.com/",
+          "health": {
+            "url": "https://cloudplay-sonyliv.pages.dev/ten3hd.m3u8",
+            "name": "Sony Sports Ten 3 Hindi",
+            "status": "working",
+            "httpStatus": 200,
+            "format": "HLS",
+            "latencyMs": 96,
+            "contentType": "application/vnd.apple.mpegurl",
+            "finalUrl": "https://cloudplay-sonyliv.pages.dev/ten3hd.m3u8",
+            "bytesRead": 3931,
+            "message": "HLS manifest reachable",
+            "checkedAt": "2026-09-13T09:37:01.840284Z"
+          }
+        },
+        {
+          "channelId": "SonySportsTen4.in",
+          "name": "Sony Sports Ten 4",
+          "title": "Sony Sports Ten 4",
+          "url": "https://cloudplay-sonyliv.pages.dev/ten4.m3u8",
+          "format": "HLS",
+          "quality": "1080p",
+          "label": "",
+          "country": "IN",
+          "countries": [
+            "IN"
+          ],
+          "languages": [
+            "tam"
+          ],
+          "categories": [
+            "sports"
+          ],
+          "website": "https://www.sonysportsnetwork.com/",
+          "health": {
+            "url": "https://cloudplay-sonyliv.pages.dev/ten4.m3u8",
+            "name": "Sony Sports Ten 4",
+            "status": "working",
+            "httpStatus": 200,
+            "format": "HLS",
+            "latencyMs": 96,
+            "contentType": "application/vnd.apple.mpegurl",
+            "finalUrl": "https://cloudplay-sonyliv.pages.dev/ten4.m3u8",
+            "bytesRead": 3947,
+            "message": "HLS manifest reachable",
+            "checkedAt": "2026-09-13T09:37:01.840558Z"
+          }
+        },
+        {
+          "channelId": "SonySportsTen5.in",
+          "name": "Sony Sports Ten 5",
+          "title": "Sony Sports Ten 5 HD",
+          "url": "https://cloudplay-sonyliv.pages.dev/ten5hd.m3u8",
+          "format": "HLS",
+          "quality": "1080p",
+          "label": "",
+          "country": "IN",
+          "countries": [
+            "IN"
+          ],
+          "languages": [
+            "ben",
+            "eng",
+            "mal"
+          ],
+          "categories": [
+            "sports"
+          ],
+          "website": "https://www.sonysportsnetwork.com/",
+          "health": {
+            "url": "https://cloudplay-sonyliv.pages.dev/ten5hd.m3u8",
+            "name": "Sony Sports Ten 5",
+            "status": "working",
+            "httpStatus": 200,
+            "format": "HLS",
+            "latencyMs": 83,
+            "contentType": "application/vnd.apple.mpegurl",
+            "finalUrl": "https://cloudplay-sonyliv.pages.dev/ten5hd.m3u8",
+            "bytesRead": 3955,
+            "message": "HLS manifest reachable",
+            "checkedAt": "2026-09-13T09:37:01.844897Z"
+          }
+        },
+        {
+          "channelId": "StarSports2Hindi.in",
+          "name": "Star Sports 2 Hindi",
+          "title": "Star Sports 2 Hindi HD",
+          "url": "http://103.157.248.140:8000/play/a01m/index.m3u8",
+          "format": "HLS",
+          "quality": "1080p",
+          "label": "",
+          "country": "IN",
+          "countries": [
+            "IN"
+          ],
+          "languages": [
+            "hin"
+          ],
+          "categories": [
+            "sports"
+          ],
+          "website": "https://jiohotstar.com/",
+          "health": {
+            "url": "http://103.157.248.140:8000/play/a01m/index.m3u8",
+            "name": "Star Sports 2 Hindi",
+            "status": "dead",
+            "httpStatus": 404,
+            "format": "",
+            "latencyMs": 532,
+            "contentType": "",
+            "finalUrl": "http://103.157.248.140:8000/play/a01m/index.m3u8",
+            "bytesRead": 0,
+            "message": "HTTP 404",
+            "checkedAt": "2026-09-13T09:37:01.928061Z"
+          }
+        },
+        {
+          "channelId": "StarSports2.in",
+          "name": "Star Sports 2",
+          "title": "Star Sports 2 HD",
+          "url": "https://tvsen7.aynaott.com/ssport2hd/index.m3u8",
+          "format": "HLS",
+          "quality": "720p",
+          "label": "",
+          "country": "IN",
+          "countries": [
+            "IN"
+          ],
+          "languages": [
+            "eng",
+            "hin",
+            "tam",
+            "tel"
+          ],
+          "categories": [
+            "sports"
+          ],
+          "website": "https://www.startv.com/about-us/sports",
+          "health": {
+            "url": "https://tvsen7.aynaott.com/ssport2hd/index.m3u8",
+            "name": "Star Sports 2",
+            "status": "restricted",
+            "httpStatus": 403,
+            "format": "",
+            "latencyMs": 741,
+            "contentType": "",
+            "finalUrl": "https://tvsen7.aynaott.com/ssport2hd/index.m3u8",
+            "bytesRead": 0,
+            "message": "HTTP 403",
+            "checkedAt": "2026-09-13T09:37:01.928710Z"
+          }
+        },
+        {
+          "channelId": "StarSportsSelect2.in",
+          "name": "Star Sports Select 2",
+          "title": "Star Sports Select 2 HD",
+          "url": "http://tvsen7.aynascope.net/ssport2hd/index.m3u8",
+          "format": "HLS",
+          "quality": "720p",
+          "label": "",
+          "country": "IN",
+          "countries": [
+            "IN"
+          ],
+          "languages": [
+            "eng"
+          ],
+          "categories": [
+            "sports"
+          ],
+          "website": "https://www.startv.com/about-us/sports/",
+          "health": {
+            "url": "http://tvsen7.aynascope.net/ssport2hd/index.m3u8",
+            "name": "Star Sports Select 2",
+            "status": "working",
+            "httpStatus": 200,
+            "format": "HLS",
+            "latencyMs": 562,
+            "contentType": "application/vnd.apple.mpegurl",
+            "finalUrl": "http://tvsen7.aynascope.net/ssport2hd/index.m3u8",
+            "bytesRead": 185,
+            "message": "HLS manifest reachable",
+            "checkedAt": "2026-09-13T09:37:01.930571Z"
+          }
+        },
+        {
+          "channelId": "Kabaddi24x7.in",
+          "name": "Kabaddi 24x7",
+          "title": "Kabaddi 24x7",
+          "url": "http://180.188.254.253/live/KABADDI24X7.m3u8",
+          "format": "HLS",
+          "quality": "576p",
+          "label": "",
+          "country": "IN",
+          "countries": [
+            "IN"
+          ],
+          "languages": [
+            "hin"
+          ],
+          "categories": [
+            "sports"
+          ],
+          "website": "",
+          "health": {
+            "url": "http://180.188.254.253/live/KABADDI24X7.m3u8",
+            "name": "Kabaddi 24x7",
+            "status": "working",
+            "httpStatus": 200,
+            "format": "HLS",
+            "latencyMs": 508,
+            "contentType": "application/vnd.apple.mpegurl",
+            "finalUrl": "http://180.188.254.253/live/KABADDI24X7.m3u8",
+            "bytesRead": 319,
+            "message": "HLS manifest reachable",
+            "checkedAt": "2026-09-13T09:37:01.937037Z"
+          }
+        },
+        {
+          "channelId": "SportsSquadHaryana.in",
+          "name": "Sports Squad Haryana",
+          "title": "Sports Squad Haryana",
+          "url": "http://180.188.254.253/live/SPORTSSQUADHARYANA.m3u8",
+          "format": "HLS",
+          "quality": "576p",
+          "label": "",
+          "country": "IN",
+          "countries": [
+            "IN"
+          ],
+          "languages": [
+            "hin"
+          ],
+          "categories": [
+            "sports"
+          ],
+          "website": "",
+          "health": {
+            "url": "http://180.188.254.253/live/SPORTSSQUADHARYANA.m3u8",
+            "name": "Sports Squad Haryana",
+            "status": "working",
+            "httpStatus": 200,
+            "format": "HLS",
+            "latencyMs": 501,
+            "contentType": "application/vnd.apple.mpegurl",
+            "finalUrl": "http://180.188.254.253/live/SPORTSSQUADHARYANA.m3u8",
+            "bytesRead": 361,
+            "message": "HLS manifest reachable",
+            "checkedAt": "2026-09-13T09:37:01.937357Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "arabic-news",
+      "label": "Arabic News",
+      "filters": {
+        "category": "news",
+        "country": "",
+        "language": "ara"
+      },
+      "candidateCount": 72,
+      "testedCount": 30,
+      "counts": {
+        "working": 27,
+        "dead": 2,
+        "timeout": 1
+      },
+      "results": [
+        {
+          "channelId": "AlArabiyaPrograms.ae",
+          "name": "Al Arabiya Programs",
+          "title": "Al Arabiya Programs",
+          "url": "https://live.alarabiya.net/alarabiapublish/aaprograms.smil/playlist.m3u8",
+          "format": "HLS",
+          "quality": "1280p",
+          "label": "",
+          "country": "AE",
+          "countries": [
+            "AE"
+          ],
+          "languages": [
+            "ara"
+          ],
+          "categories": [
+            "documentary",
+            "news"
+          ],
+          "website": "https://www.alarabiya.net/programs",
+          "health": {
+            "url": "https://live.alarabiya.net/alarabiapublish/aaprograms.smil/playlist.m3u8",
+            "name": "Al Arabiya Programs",
+            "status": "working",
+            "httpStatus": 200,
+            "format": "HLS",
+            "latencyMs": 290,
+            "contentType": "application/vnd.apple.mpegurl",
+            "finalUrl": "https://live.alarabiya.net/alarabiapublish/aaprograms.smil/playlist.m3u8",
+            "bytesRead": 688,
+            "message": "HLS manifest reachable",
+            "checkedAt": "2026-09-13T09:37:02.102784Z"
+          }
+        },
+        {
+          "channelId": "SkyNewsArabiaVertical.ae",
+          "name": "Sky News Arabia Vertical",
+          "title": "Sky News Arabia (Portrait)",
+          "url": "https://stream.skynewsarabia.com/vertical/vertical.m3u8",
+          "format": "HLS",
+          "quality": "1280p",
+          "label": "",
+          "country": "AE",
+          "countries": [
+            "AE"
+          ],
+          "languages": [
+            "ara"
+          ],
+          "categories": [
+            "news"
+          ],
+          "website": "https://www.skynewsarabia.com/",
+          "health": {
+            "url": "https://stream.skynewsarabia.com/vertical/vertical.m3u8",
+            "name": "Sky News Arabia Vertical",
+            "status": "working",
+            "httpStatus": 200,
+            "format": "HLS",
+            "latencyMs": 365,
+            "contentType": "application/vnd.apple.mpegurl",
+            "finalUrl": "https://stream.skynewsarabia.com/vertical/vertical.m3u8",
+            "bytesRead": 1050,
+            "message": "HLS manifest reachable",
+            "checkedAt": "2026-09-13T09:37:02.123796Z"
+          }
+        },
+        {
+          "channelId": "AlArabyTV.qa",
+          "name": "Al Araby TV",
+          "title": "Al Araby TV",
+          "url": "https://live.kwikmotion.com/alaraby1live/alaraby_abr/playlist.m3u8",
+          "format": "HLS",
+          "quality": "1080p",
+          "label": "",
+          "country": "QA",
+          "countries": [
+            "QA"
+          ],
+          "languages": [
+            "ara"
+          ],
+          "categories": [
+            "news"
+          ],
+          "website": "https://www.alaraby.com/",
+          "health": {
+            "url": "https://live.kwikmotion.com/alaraby1live/alaraby_abr/playlist.m3u8",
+            "name": "Al Araby TV",
+            "status": "working",
+            "httpStatus": 200,
+            "format": "HLS",
+            "latencyMs": 334,
+            "contentType": "application/x-mpegURL",
+            "finalUrl": "https://live.kwikmotion.com/alaraby1live/alaraby_abr/playlist.m3u8",
+            "bytesRead": 1559,
+            "message": "HLS manifest reachable",
+            "checkedAt": "2026-09-13T09:37:02.187176Z"
+          }
+        },
+        {
+          "channelId": "AlArabyTV2.qa",
+          "name": "Al Araby TV 2",
+          "title": "Al Araby TV 2",
+          "url": "https://live.kwikmotion.com/alaraby2live/alaraby2.smil/playlist.m3u8",
+          "format": "HLS",
+          "quality": "1080p",
+          "label": "",
+          "country": "QA",
+          "countries": [
+            "QA"
+          ],
+          "languages": [
+            "ara"
+          ],
+          "categories": [
+            "news"
+          ],
+          "website": "https://www.alaraby.com/alaraby2",
+          "health": {
+            "url": "https://live.kwikmotion.com/alaraby2live/alaraby2.smil/playlist.m3u8",
+            "name": "Al Araby TV 2",
+            "status": "working",
+            "httpStatus": 200,
+            "format": "HLS",
+            "latencyMs": 254,
+            "contentType": "application/x-mpegURL",
+            "finalUrl": "https://live.kwikmotion.com/alaraby2live/alaraby2.smil/playlist.m3u8",
+            "bytesRead": 972,
+            "message": "HLS manifest reachable",
+            "checkedAt": "2026-09-13T09:37:02.275318Z"
+          }
+        },
+        {
+          "channelId": "AlEkhbariya.sa",
+          "name": "Al Ekhbariya",
+          "title": "Al Ekhbariya",
+          "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-al-ekhbaria/297b3ef1cd0633ad9cfba7473a686a06/index.m3u8",
+          "format": "HLS",
+          "quality": "1080p",
+          "label": "",
+          "country": "SA",
+          "countries": [
+            "SA"
+          ],
+          "languages": [
+            "ara"
+          ],
+          "categories": [
+            "news"
+          ],
+          "website": "https://www.alekhbariya.net/",
+          "health": {
+            "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-al-ekhbaria/297b3ef1cd0633ad9cfba7473a686a06/index.m3u8",
+            "name": "Al Ekhbariya",
+            "status": "working",
+            "httpStatus": 200,
+            "format": "HLS",
+            "latencyMs": 357,
+            "contentType": "application/x-mpegURL",
+            "finalUrl": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-al-ekhbaria/297b3ef1cd0633ad9cfba7473a686a06/index.m3u8",
+            "bytesRead": 1186,
+            "message": "HLS manifest reachable",
+            "checkedAt": "2026-09-13T09:37:02.327063Z"
+          }
+        },
+        {
+          "channelId": "AlGhadTV.eg",
+          "name": "Al Ghad TV",
+          "title": "Al Ghad TV",
+          "url": "https://eazyvwqssi.erbvr.com/alghadtv/alghadtv.m3u8",
+          "format": "HLS",
+          "quality": "1080p",
+          "label": "",
+          "country": "EG",
+          "countries": [
+            "EG"
+          ],
+          "languages": [
+            "ara"
+          ],
+          "categories": [
+            "news"
+          ],
+          "website": "https://www.alghad.tv/",
+          "health": {
+            "url": "https://eazyvwqssi.erbvr.com/alghadtv/alghadtv.m3u8",
+            "name": "Al Ghad TV",
+            "status": "working",
+            "httpStatus": 200,
+            "format": "HLS",
+            "latencyMs": 925,
+            "contentType": "application/vnd.apple.mpegurl",
+            "finalUrl": "https://eazyvwqssi.erbvr.com/alghadtv/alghadtv.m3u8?sid=I_AAES623022AJqocDW83Q",
+            "bytesRead": 522,
+            "message": "HLS manifest reachable",
+            "checkedAt": "2026-09-13T09:37:02.327826Z"
+          }
+        },
+        {
+          "channelId": "AlHadath.sa",
+          "name": "Al Hadath",
+          "title": "Al Arabiya Al Hadath",
+          "url": "https://av.alarabiya.net/alarabiapublish/alhadath.smil/playlist.m3u8",
+          "format": "HLS",
+          "quality": "1080p",
+          "label": "",
+          "country": "SA",
+          "countries": [
+            "SA"
+          ],
+          "languages": [
+            "ara"
+          ],
+          "categories": [
+            "news"
+          ],
+          "website": "https://www.alhadath.net/",
+          "health": {
+            "url": "https://av.alarabiya.net/alarabiapublish/alhadath.smil/playlist.m3u8",
+            "name": "Al Hadath",
+            "status": "working",
+            "httpStatus": 200,
+            "format": "HLS",
+            "latencyMs": 205,
+            "contentType": "application/vnd.apple.mpegurl",
+            "finalUrl": "https://av.alarabiya.net/alarabiapublish/alhadath.smil/playlist.m3u8",
+            "bytesRead": 679,
+            "message": "HLS manifest reachable",
+            "checkedAt": "2026-09-13T09:37:02.362949Z"
+          }
+        },
+        {
+          "channelId": "AlJazeera.qa",
+          "name": "Al Jazeera",
+          "title": "Al Jazeera",
+          "url": "https://live-hls-apps-aja-fa.getaj.net/AJA/01.m3u8",
+          "format": "HLS",
+          "quality": "1080p",
+          "label": "",
+          "country": "QA",
+          "countries": [
+            "QA"
+          ],
+          "languages": [
+            "ara"
+          ],
+          "categories": [
+            "news"
+          ],
+          "website": "https://www.aljazeera.net/",
+          "health": {
+            "url": "https://live-hls-apps-aja-fa.getaj.net/AJA/01.m3u8",
+            "name": "Al Jazeera",
+            "status": "working",
+            "httpStatus": 200,
+            "format": "HLS",
+            "latencyMs": 93,
+            "contentType": "application/vnd.apple.mpegurl",
+            "finalUrl": "https://live-hls-apps-aja-fa.getaj.net/AJA/01.m3u8",
+            "bytesRead": 385,
+            "message": "HLS manifest reachable",
+            "checkedAt": "2026-09-13T09:37:02.393198Z"
+          }
+        },
+        {
+          "channelId": "AlJazeeraMubasher.qa",
+          "name": "Al Jazeera Mubasher",
+          "title": "Al Jazeera Mubasher",
+          "url": "https://live-hls-apps-ajm-fa.getaj.net/AJM/index.m3u8",
+          "format": "HLS",
+          "quality": "1080p",
+          "label": "",
+          "country": "QA",
+          "countries": [
+            "QA"
+          ],
+          "languages": [
+            "ara"
+          ],
+          "categories": [
+            "news"
+          ],
+          "website": "http://mubasher.aljazeera.net/",
+          "health": {
+            "url": "https://live-hls-apps-ajm-fa.getaj.net/AJM/index.m3u8",
+            "name": "Al Jazeera Mubasher",
+            "status": "working",
+            "httpStatus": 200,
+            "format": "HLS",
+            "latencyMs": 346,
+            "contentType": "application/vnd.apple.mpegurl",
+            "finalUrl": "https://live-hls-apps-ajm-fa.getaj.net/AJM/index.m3u8",
+            "bytesRead": 809,
+            "message": "HLS manifest reachable",
+            "checkedAt": "2026-09-13T09:37:02.439359Z"
+          }
+        },
+        {
+          "channelId": "AlJazeeraMubasher24.qa",
+          "name": "Al Jazeera Mubasher 24",
+          "title": "Al Jazeera Mubasher 24",
+          "url": "https://live-hls-apps-ajm24-fa.getaj.net/AJM24/index.m3u8",
+          "format": "HLS",
+          "quality": "1080p",
+          "label": "",
+          "country": "QA",
+          "countries": [
+            "QA"
+          ],
+          "languages": [
+            "ara"
+          ],
+          "categories": [
+            "news"
+          ],
+          "website": "https://www.aljazeeramubasher.net/",
+          "health": {
+            "url": "https://live-hls-apps-ajm24-fa.getaj.net/AJM24/index.m3u8",
+            "name": "Al Jazeera Mubasher 24",
+            "status": "working",
+            "httpStatus": 200,
+            "format": "HLS",
+            "latencyMs": 486,
+            "contentType": "application/vnd.apple.mpegurl",
+            "finalUrl": "https://live-hls-apps-ajm24-fa.getaj.net/AJM24/index.m3u8",
+            "bytesRead": 633,
+            "message": "HLS manifest reachable",
+            "checkedAt": "2026-09-13T09:37:02.445343Z"
+          }
+        },
+        {
+          "channelId": "AlJazeeraMubasherBroadcast2.qa",
+          "name": "Al Jazeera Mubasher Broadcast 2",
+          "title": "Al Jazeera Mubasher Broadcast 2",
+          "url": "https://live-hls-apps-ajm2-fa.getaj.net/AJM2/index.m3u8",
+          "format": "HLS",
+          "quality": "1080p",
+          "label": "",
+          "country": "QA",
+          "countries": [
+            "QA"
+          ],
+          "languages": [
+            "ara"
+          ],
+          "categories": [
+            "news"
+          ],
+          "website": "https://www.aljazeeramubasher.net/",
+          "health": {
+            "url": "https://live-hls-apps-ajm2-fa.getaj.net/AJM2/index.m3u8",
+            "name": "Al Jazeera Mubasher Broadcast 2",
+            "status": "working",
+            "httpStatus": 200,
+            "format": "HLS",
+            "latencyMs": 71,
+            "contentType": "application/vnd.apple.mpegurl",
+            "finalUrl": "https://live-hls-apps-ajm2-fa.getaj.net/AJM2/index.m3u8",
+            "bytesRead": 633,
+            "message": "HLS manifest reachable",
+            "checkedAt": "2026-09-13T09:37:02.461122Z"
+          }
+        },
+        {
+          "channelId": "AlSharqiyaNews.iq",
+          "name": "Al Sharqiya News",
+          "title": "Al-Sharqiya News",
+          "url": "https://5d94523502c2d.streamlock.net/alsharqiyalive/mystream/playlist.m3u8",
+          "format": "HLS",
+          "quality": "1080p",
+          "label": "",
+          "country": "IQ",
+          "countries": [
+            "IQ"
+          ],
+          "languages": [
+            "ara"
+          ],
+          "categories": [
+            "news"
+          ],
+          "website": "http://www.alsharqiya.com/",
+          "health": {
+            "url": "https://5d94523502c2d.streamlock.net/alsharqiyalive/mystream/playlist.m3u8",
+            "name": "Al Sharqiya News",
+            "status": "working",
+            "httpStatus": 200,
+            "format": "HLS",
+            "latencyMs": 705,
+            "contentType": "application/vnd.apple.mpegurl",
+            "finalUrl": "https://5d94523502c2d.streamlock.net/alsharqiyalive/mystream/playlist.m3u8",
+            "bytesRead": 138,
+            "message": "HLS manifest reachable",
+            "checkedAt": "2026-09-13T09:37:02.486361Z"
+          }
+        },
+        {
+          "channelId": "Alarabiya.ae",
+          "name": "Alarabiya",
+          "title": "Al Arabiya",
+          "url": "https://live.alarabiya.net/alarabiapublish/alarabiya.smil/playlist.m3u8",
+          "format": "HLS",
+          "quality": "1080p",
+          "label": "",
+          "country": "AE",
+          "countries": [
+            "AE"
+          ],
+          "languages": [
+            "ara"
+          ],
+          "categories": [
+            "news"
+          ],
+          "website": "https://www.alarabiya.net/",
+          "health": {
+            "url": "https://live.alarabiya.net/alarabiapublish/alarabiya.smil/playlist.m3u8",
+            "name": "Alarabiya",
+            "status": "working",
+            "httpStatus": 200,
+            "format": "HLS",
+            "latencyMs": 149,
+            "contentType": "application/vnd.apple.mpegurl",
+            "finalUrl": "https://live.alarabiya.net/alarabiapublish/alarabiya.smil/playlist.m3u8",
+            "bytesRead": 682,
+            "message": "HLS manifest reachable",
+            "checkedAt": "2026-09-13T09:37:02.489474Z"
+          }
+        },
+        {
+          "channelId": "AlghadeerTV.iq",
+          "name": "Alghadeer TV",
+          "title": "Alghadeer TV",
+          "url": "https://sd343444.vodu.store:3356/live/Alghadeer/index.m3u8",
+          "format": "HLS",
+          "quality": "1080p",
+          "label": "",
+          "country": "IQ",
+          "countries": [
+            "IQ"
+          ],
+          "languages": [
+            "ara"
+          ],
+          "categories": [
+            "news"
+          ],
+          "website": "http://alghadeertv.net/",
+          "health": {
+            "url": "https://sd343444.vodu.store:3356/live/Alghadeer/index.m3u8",
+            "name": "Alghadeer TV",
+            "status": "working",
+            "httpStatus": 200,
+            "format": "HLS",
+            "latencyMs": 974,
+            "contentType": "application/vnd.apple.mpegurl",
+            "finalUrl": "https://sd343444.vodu.store:3356/live/Alghadeer/index.m3u8",
+            "bytesRead": 183,
+            "message": "HLS manifest reachable",
+            "checkedAt": "2026-09-13T09:37:02.491483Z"
+          }
+        },
+        {
+          "channelId": "AlhaqeqaAldawlia.jo",
+          "name": "Alhaqeqa Aldawlia",
+          "title": "Alhaqeqa Aldawlia",
+          "url": "https://ghaasiflu.online/alhqeqa/index.m3u8",
+          "format": "HLS",
+          "quality": "1080p",
+          "label": "",
+          "country": "JO",
+          "countries": [
+            "JO"
+          ],
+          "languages": [
+            "ara"
+          ],
+          "categories": [
+            "news"
+          ],
+          "website": "https://www.factjo.com/Pages.aspx?id=6",
+          "health": {
+            "url": "https://ghaasiflu.online/alhqeqa/index.m3u8",
+            "name": "Alhaqeqa Aldawlia",
+            "status": "dead",
+            "httpStatus": 404,
+            "format": "",
+            "latencyMs": 617,
+            "contentType": "",
+            "finalUrl": "https://ghaasiflu.online/alhqeqa/index.m3u8",
+            "bytesRead": 0,
+            "message": "HTTP 404",
+            "checkedAt": "2026-09-13T09:37:02.493372Z"
+          }
+        },
+        {
+          "channelId": "AltaghierTV.jo",
+          "name": "Altaghier TV",
+          "title": "Altaghier TV",
+          "url": "https://jmc-live.ercdn.net/altaghier/altaghier.m3u8",
+          "format": "HLS",
+          "quality": "1080p",
+          "label": "",
+          "country": "JO",
+          "countries": [
+            "JO"
+          ],
+          "languages": [
+            "ara"
+          ],
+          "categories": [
+            "news"
+          ],
+          "website": "https://altaghier.tv/",
+          "health": {
+            "url": "https://jmc-live.ercdn.net/altaghier/altaghier.m3u8",
+            "name": "Altaghier TV",
+            "status": "working",
+            "httpStatus": 200,
+            "format": "HLS",
+            "latencyMs": 600,
+            "contentType": "application/vnd.apple.mpegurl",
+            "finalUrl": "https://jmc-live.ercdn.net/altaghier/altaghier.m3u8",
+            "bytesRead": 232,
+            "message": "HLS manifest reachable",
+            "checkedAt": "2026-09-13T09:37:02.521319Z"
+          }
+        },
+        {
+          "channelId": "AsharqNews.sa",
+          "name": "Asharq News",
+          "title": "Asharq News",
+          "url": "https://live-news.asharq.com/asharq.m3u8",
+          "format": "HLS",
+          "quality": "1080p",
+          "label": "",
+          "country": "SA",
+          "countries": [
+            "SA"
+          ],
+          "languages": [
+            "ara"
+          ],
+          "categories": [
+            "business",
+            "news"
+          ],
+          "website": "https://asharq.com/",
+          "health": {
+            "url": "https://live-news.asharq.com/asharq.m3u8",
+            "name": "Asharq News",
+            "status": "working",
+            "httpStatus": 200,
+            "format": "HLS",
+            "latencyMs": 325,
+            "contentType": "application/vnd.apple.mpegurl",
+            "finalUrl": "https://live-news.asharq.com/asharq.m3u8",
+            "bytesRead": 806,
+            "message": "HLS manifest reachable",
+            "checkedAt": "2026-09-13T09:37:02.529886Z"
+          }
+        },
+        {
+          "channelId": "AsharqRadio.sa",
+          "name": "Asharq Radio",
+          "title": "Asharq Radio",
+          "url": "https://svs.itworkscdn.net/asharqradiovlive/asharqradiov/playlist.m3u8",
+          "format": "HLS",
+          "quality": "1080p",
+          "label": "",
+          "country": "SA",
+          "countries": [
+            "SA"
+          ],
+          "languages": [
+            "ara"
+          ],
+          "categories": [
+            "business",
+            "news"
+          ],
+          "website": "https://asharqbusiness.com/radio/",
+          "health": {
+            "url": "https://svs.itworkscdn.net/asharqradiovlive/asharqradiov/playlist.m3u8",
+            "name": "Asharq Radio",
+            "status": "working",
+            "httpStatus": 200,
+            "format": "HLS",
+            "latencyMs": 450,
+            "contentType": "application/x-mpegURL",
+            "finalUrl": "https://svs.itworkscdn.net/asharqradiovlive/asharqradiov/playlist.m3u8",
+            "bytesRead": 160,
+            "message": "HLS manifest reachable",
+            "checkedAt": "2026-09-13T09:37:02.532196Z"
+          }
+        },
+        {
+          "channelId": "CGTNArabic.cn",
+          "name": "CGTN Arabic",
+          "title": "CGTN Arabic",
+          "url": "https://arabic-livews.cgtn.com/hls/LSveq57bErWLinBnxosqjisZ220802LSTefTAS9zc9mpU08y3np9TH220802cd/playlist.m3u8",
+          "format": "HLS",
+          "quality": "1080p",
+          "label": "",
+          "country": "CN",
+          "countries": [
+            "CN"
+          ],
+          "languages": [
+            "ara"
+          ],
+          "categories": [
+            "news"
+          ],
+          "website": "https://arabic.cgtn.com/",
+          "health": {
+            "url": "https://arabic-livews.cgtn.com/hls/LSveq57bErWLinBnxosqjisZ220802LSTefTAS9zc9mpU08y3np9TH220802cd/playlist.m3u8",
+            "name": "CGTN Arabic",
+            "status": "timeout",
+            "httpStatus": null,
+            "format": "",
+            "latencyMs": 12247,
+            "contentType": "",
+            "finalUrl": "",
+            "bytesRead": 0,
+            "message": "Timed out after 12s",
+            "checkedAt": "2026-09-13T09:37:02.551708Z"
+          }
+        },
+        {
+          "channelId": "DabangaTV.sd",
+          "name": "Dabanga TV",
+          "title": "Dabanga TV",
+          "url": "https://hls.dabangasudan.org/hls/stream.m3u8",
+          "format": "HLS",
+          "quality": "1080p",
+          "label": "",
+          "country": "SD",
+          "countries": [
+            "SD"
+          ],
+          "languages": [
+            "ara"
+          ],
+          "categories": [
+            "news",
+            "education"
+          ],
+          "website": "https://www.dabangasudan.org/",
+          "health": {
+            "url": "https://hls.dabangasudan.org/hls/stream.m3u8",
+            "name": "Dabanga TV",
+            "status": "working",
+            "httpStatus": 200,
+            "format": "HLS",
+            "latencyMs": 326,
+            "contentType": "application/x-mpegURL",
+            "finalUrl": "https://hls.dabangasudan.org/hls/stream.m3u8",
+            "bytesRead": 248,
+            "message": "HLS manifest reachable",
+            "checkedAt": "2026-09-13T09:37:02.568749Z"
+          }
+        },
+        {
+          "channelId": "DijlahTV.iq",
+          "name": "Dijlah TV",
+          "title": "Dijlah TV",
+          "url": "https://ghaasiflu.online/Dijlah/index.m3u8",
+          "format": "HLS",
+          "quality": "1080p",
+          "label": "",
+          "country": "IQ",
+          "countries": [
+            "IQ"
+          ],
+          "languages": [
+            "ara",
+            "eng"
+          ],
+          "categories": [
+            "news"
+          ],
+          "website": "http://www.dijlah.tv/",
+          "health": {
+            "url": "https://ghaasiflu.online/Dijlah/index.m3u8",
+            "name": "Dijlah TV",
+            "status": "working",
+            "httpStatus": 200,
+            "format": "HLS",
+            "latencyMs": 604,
+            "contentType": "application/vnd.apple.mpegurl",
+            "finalUrl": "https://ghaasiflu.online/Dijlah/index.m3u8",
+            "bytesRead": 183,
+            "message": "HLS manifest reachable",
+            "checkedAt": "2026-09-13T09:37:02.638940Z"
+          }
+        },
+        {
+          "channelId": "DW.de",
+          "name": "DW",
+          "title": "DW Arabic",
+          "url": "https://dwamdstream103.akamaized.net/hls/live/2015526/dwstream103/master.m3u8",
+          "format": "HLS",
+          "quality": "1080p",
+          "label": "",
+          "country": "DE",
+          "countries": [
+            "DE"
+          ],
+          "languages": [
+            "ara"
+          ],
+          "categories": [
+            "news"
+          ],
+          "website": "https://www.dw.com/",
+          "health": {
+            "url": "https://dwamdstream103.akamaized.net/hls/live/2015526/dwstream103/master.m3u8",
+            "name": "DW",
+            "status": "working",
+            "httpStatus": 200,
+            "format": "HLS",
+            "latencyMs": 216,
+            "contentType": "application/vnd.apple.mpegurl",
+            "finalUrl": "https://dwamdstream103.akamaized.net/hls/live/2015526/dwstream103/master.m3u8",
+            "bytesRead": 3106,
+            "message": "HLS manifest reachable",
+            "checkedAt": "2026-09-13T09:37:02.651543Z"
+          }
+        },
+        {
+          "channelId": "France24.fr",
+          "name": "France 24",
+          "title": "France 24 Arabic",
+          "url": "https://live.france24.com/hls/live/2037222-b/F24_AR_HI_HLS/master_5000.m3u8",
+          "format": "HLS",
+          "quality": "1080p",
+          "label": "",
+          "country": "FR",
+          "countries": [
+            "FR"
+          ],
+          "languages": [
+            "ara"
+          ],
+          "categories": [
+            "news"
+          ],
+          "website": "https://www.france24.com/",
+          "health": {
+            "url": "https://live.france24.com/hls/live/2037222-b/F24_AR_HI_HLS/master_5000.m3u8",
+            "name": "France 24",
+            "status": "working",
+            "httpStatus": 200,
+            "format": "HLS",
+            "latencyMs": 578,
+            "contentType": "application/x-mpegURL",
+            "finalUrl": "https://live.france24.com/hls/live/2037222-b/F24_AR_HI_HLS/master_5000.m3u8",
+            "bytesRead": 809,
+            "message": "HLS manifest reachable",
+            "checkedAt": "2026-09-13T09:37:02.670368Z"
+          }
+        },
+        {
+          "channelId": "HalabTodayTV.sy",
+          "name": "Halab Today TV",
+          "title": "Halab Today TV",
+          "url": "https://halabtoday-live.lg.mncdn.com/halabtoday/livestream/playlist.m3u8",
+          "format": "HLS",
+          "quality": "1080p",
+          "label": "",
+          "country": "SY",
+          "countries": [
+            "SY"
+          ],
+          "languages": [
+            "ara"
+          ],
+          "categories": [
+            "news"
+          ],
+          "website": "https://halabtodaytv.net/",
+          "health": {
+            "url": "https://halabtoday-live.lg.mncdn.com/halabtoday/livestream/playlist.m3u8",
+            "name": "Halab Today TV",
+            "status": "dead",
+            "httpStatus": 404,
+            "format": "",
+            "latencyMs": 360,
+            "contentType": "",
+            "finalUrl": "https://halabtoday-live.lg.mncdn.com/halabtoday/livestream/playlist.m3u8",
+            "bytesRead": 0,
+            "message": "HTTP 404",
+            "checkedAt": "2026-09-13T09:37:02.684595Z"
+          }
+        },
+        {
+          "channelId": "i24NEWSArabic.il",
+          "name": "i24NEWS Arabic",
+          "title": "i24NEWS Arabic",
+          "url": "https://i24newsarabic-cdn.encoders.immergo.tv/master.m3u8",
+          "format": "HLS",
+          "quality": "1080p",
+          "label": "",
+          "country": "IL",
+          "countries": [
+            "IL"
+          ],
+          "languages": [
+            "ara"
+          ],
+          "categories": [
+            "news"
+          ],
+          "website": "https://www.i24news.tv/ar/",
+          "health": {
+            "url": "https://i24newsarabic-cdn.encoders.immergo.tv/master.m3u8",
+            "name": "i24NEWS Arabic",
+            "status": "working",
+            "httpStatus": 200,
+            "format": "HLS",
+            "latencyMs": 332,
+            "contentType": "application/x-mpegurl; charset=utf-8",
+            "finalUrl": "https://i24newsarabic-cdn.encoders.immergo.tv/master.m3u8",
+            "bytesRead": 563,
+            "message": "HLS manifest reachable",
+            "checkedAt": "2026-09-13T09:37:02.739692Z"
+          }
+        },
+        {
+          "channelId": "KTVNews.kw",
+          "name": "KTV News",
+          "title": "KTV News",
+          "url": "https://kwtkbta.cdn.mangomolo.com/kb/smil:kb.stream.smil/chunklist.m3u8",
+          "format": "HLS",
+          "quality": "1080p",
+          "label": "",
+          "country": "KW",
+          "countries": [
+            "KW"
+          ],
+          "languages": [
+            "ara"
+          ],
+          "categories": [
+            "news"
+          ],
+          "website": "https://media.gov.kw/",
+          "health": {
+            "url": "https://kwtkbta.cdn.mangomolo.com/kb/smil:kb.stream.smil/chunklist.m3u8",
+            "name": "KTV News",
+            "status": "working",
+            "httpStatus": 200,
+            "format": "HLS",
+            "latencyMs": 1081,
+            "contentType": "application/vnd.apple.mpegurl",
+            "finalUrl": "https://kwtkbta.cdn.mangomolo.com/kb/smil:kb.stream.smil/chunklist.m3u8",
+            "bytesRead": 437,
+            "message": "HLS manifest reachable",
+            "checkedAt": "2026-09-13T09:37:02.785874Z"
+          }
+        },
+        {
+          "channelId": "KurdsatNews.iq",
+          "name": "Kurdsat News",
+          "title": "Kurdsat News",
+          "url": "https://hlspackager.akamaized.net/live/DB/KURDSAT_NEWS/HLS/KURDSAT_NEWS.m3u8",
+          "format": "HLS",
+          "quality": "1080p",
+          "label": "",
+          "country": "IQ",
+          "countries": [
+            "IQ"
+          ],
+          "languages": [
+            "ara",
+            "kur"
+          ],
+          "categories": [
+            "news"
+          ],
+          "website": "https://www.kurdsatnews.com/",
+          "health": {
+            "url": "https://hlspackager.akamaized.net/live/DB/KURDSAT_NEWS/HLS/KURDSAT_NEWS.m3u8",
+            "name": "Kurdsat News",
+            "status": "working",
+            "httpStatus": 200,
+            "format": "HLS",
+            "latencyMs": 399,
+            "contentType": "application/x-mpegURL",
+            "finalUrl": "https://hlspackager.akamaized.net/live/DB/KURDSAT_NEWS/HLS/KURDSAT_NEWS.m3u8",
+            "bytesRead": 761,
+            "message": "HLS manifest reachable",
+            "checkedAt": "2026-09-13T09:37:02.855385Z"
+          }
+        },
+        {
+          "channelId": "Makan33.il",
+          "name": "Makan 33",
+          "title": "Makan 33",
+          "url": "https://kancdn.medonecdn.net/livehls/oil/kancdn-live/live/makan/live.livx/playlist.m3u8",
+          "format": "HLS",
+          "quality": "1080p",
+          "label": "",
+          "country": "IL",
+          "countries": [
+            "IL"
+          ],
+          "languages": [
+            "ara"
+          ],
+          "categories": [
+            "news"
+          ],
+          "website": "https://www.makan.org.il/",
+          "health": {
+            "url": "https://kancdn.medonecdn.net/livehls/oil/kancdn-live/live/makan/live.livx/playlist.m3u8",
+            "name": "Makan 33",
+            "status": "working",
+            "httpStatus": 200,
+            "format": "HLS",
+            "latencyMs": 2312,
+            "contentType": "application/x-mpegURL",
+            "finalUrl": "https://n-160-2.cdn.avcom-bezeq.tv/webcache/redge-il/livehls/oil/kancdn-live/live/makan/live.livx/playlist.m3u8",
+            "bytesRead": 765,
+            "message": "HLS manifest reachable",
+            "checkedAt": "2026-09-13T09:37:02.867987Z"
+          }
+        },
+        {
+          "channelId": "Medi1TVArabic.ma",
+          "name": "Medi1TV Arabic",
+          "title": "Medi 1 TV Arabic",
+          "url": "https://cdn.live.easybroadcast.io/abr_corp/83_medi1tv-arabic_g90v4ec/playlist.m3u8",
+          "format": "HLS",
+          "quality": "1080p",
+          "label": "",
+          "country": "MA",
+          "countries": [
+            "MA"
+          ],
+          "languages": [
+            "ara"
+          ],
+          "categories": [
+            "news"
+          ],
+          "website": "https://medi1tv.com/",
+          "health": {
+            "url": "https://cdn.live.easybroadcast.io/abr_corp/83_medi1tv-arabic_g90v4ec/playlist.m3u8",
+            "name": "Medi1TV Arabic",
+            "status": "working",
+            "httpStatus": 200,
+            "format": "HLS",
+            "latencyMs": 523,
+            "contentType": "application/vnd.apple.mpegurl",
+            "finalUrl": "https://cdn.live.easybroadcast.io/abr_corp/83_medi1tv-arabic_g90v4ec/playlist.m3u8",
+            "bytesRead": 619,
+            "message": "HLS manifest reachable",
+            "checkedAt": "2026-09-13T09:37:02.895765Z"
+          }
+        },
+        {
+          "channelId": "Medi1TVMaghreb.ma",
+          "name": "Medi1TV Maghreb",
+          "title": "Medi 1 TV Maghreb",
+          "url": "https://cdn.live.easybroadcast.io/abr_corp/83_medi1tv-maghreb_jnbspmg/playlist.m3u8",
+          "format": "HLS",
+          "quality": "1080p",
+          "label": "",
+          "country": "MA",
+          "countries": [
+            "MA"
+          ],
+          "languages": [
+            "ara",
+            "fra"
+          ],
+          "categories": [
+            "news"
+          ],
+          "website": "https://medi1tv.com/",
+          "health": {
+            "url": "https://cdn.live.easybroadcast.io/abr_corp/83_medi1tv-maghreb_jnbspmg/playlist.m3u8",
+            "name": "Medi1TV Maghreb",
+            "status": "working",
+            "httpStatus": 200,
+            "format": "HLS",
+            "latencyMs": 455,
+            "contentType": "application/vnd.apple.mpegurl",
+            "finalUrl": "https://cdn.live.easybroadcast.io/abr_corp/83_medi1tv-maghreb_jnbspmg/playlist.m3u8",
+            "bytesRead": 623,
+            "message": "HLS manifest reachable",
+            "checkedAt": "2026-09-13T09:37:02.931579Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "arabic-entertainment",
+      "label": "Arabic Entertainment",
+      "filters": {
+        "category": "entertainment",
+        "country": "",
+        "language": "ara"
+      },
+      "candidateCount": 6,
+      "testedCount": 6,
+      "counts": {
+        "working": 3,
+        "timeout": 1,
+        "restricted": 2
+      },
+      "results": [
+        {
+          "channelId": "Kurdsat.iq",
+          "name": "Kurdsat",
+          "title": "Kurdsat",
+          "url": "https://hlspackager.akamaized.net/live/DB/KURDSAT_HD/HLS/KURDSAT_HD.m3u8",
+          "format": "HLS",
+          "quality": "1080p",
+          "label": "",
+          "country": "IQ",
+          "countries": [
+            "IQ"
+          ],
+          "languages": [
+            "ara",
+            "kur"
+          ],
+          "categories": [
+            "entertainment"
+          ],
+          "website": "https://www.kurdsat.tv/",
+          "health": {
+            "url": "https://hlspackager.akamaized.net/live/DB/KURDSAT_HD/HLS/KURDSAT_HD.m3u8",
+            "name": "Kurdsat",
+            "status": "working",
+            "httpStatus": 200,
+            "format": "HLS",
+            "latencyMs": 375,
+            "contentType": "application/x-mpegURL",
+            "finalUrl": "https://hlspackager.akamaized.net/live/DB/KURDSAT_HD/HLS/KURDSAT_HD.m3u8",
+            "bytesRead": 753,
+            "message": "HLS manifest reachable",
+            "checkedAt": "2026-09-13T09:37:02.982335Z"
+          }
+        },
+        {
+          "channelId": "MBC4.ae",
+          "name": "MBC 4",
+          "title": "MBC 4",
+          "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-4/24f134f1cd63db9346439e96b86ca6ed/index.m3u8",
+          "format": "HLS",
+          "quality": "1080p",
+          "label": "",
+          "country": "AE",
+          "countries": [
+            "AE"
+          ],
+          "languages": [
+            "ara"
+          ],
+          "categories": [
+            "entertainment"
+          ],
+          "website": "http://www.mbc.net/mbc4",
+          "health": {
+            "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-4/24f134f1cd63db9346439e96b86ca6ed/index.m3u8",
+            "name": "MBC 4",
+            "status": "working",
+            "httpStatus": 200,
+            "format": "HLS",
+            "latencyMs": 205,
+            "contentType": "application/x-mpegURL",
+            "finalUrl": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-4/24f134f1cd63db9346439e96b86ca6ed/index.m3u8",
+            "bytesRead": 1186,
+            "message": "HLS manifest reachable",
+            "checkedAt": "2026-09-13T09:37:03.045010Z"
+          }
+        },
+        {
+          "channelId": "MBCDrama.ae",
+          "name": "MBC Drama",
+          "title": "MBC Drama",
+          "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-drama/2c28a458e2f3253e678b07ac7d13fe71/index.m3u8",
+          "format": "HLS",
+          "quality": "1080p",
+          "label": "",
+          "country": "AE",
+          "countries": [
+            "AE"
+          ],
+          "languages": [
+            "ara"
+          ],
+          "categories": [
+            "entertainment"
+          ],
+          "website": "https://www.mbc.net/channels/mbc-drama",
+          "health": {
+            "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-drama/2c28a458e2f3253e678b07ac7d13fe71/index.m3u8",
+            "name": "MBC Drama",
+            "status": "timeout",
+            "httpStatus": null,
+            "format": "",
+            "latencyMs": 12146,
+            "contentType": "",
+            "finalUrl": "",
+            "bytesRead": 0,
+            "message": "Timed out after 12s",
+            "checkedAt": "2026-09-13T09:37:03.072031Z"
+          }
+        },
+        {
+          "channelId": "FujairahTV.ae",
+          "name": "Fujairah TV",
+          "title": "Fujairah TV",
+          "url": "https://live.kwikmotion.com/fujairahlive/fujairah.smil/playlist.m3u8",
+          "format": "HLS",
+          "quality": "720p",
+          "label": "",
+          "country": "AE",
+          "countries": [
+            "AE"
+          ],
+          "languages": [
+            "ara"
+          ],
+          "categories": [
+            "entertainment"
+          ],
+          "website": "https://www.fujairahtv.ae/",
+          "health": {
+            "url": "https://live.kwikmotion.com/fujairahlive/fujairah.smil/playlist.m3u8",
+            "name": "Fujairah TV",
+            "status": "restricted",
+            "httpStatus": 403,
+            "format": "",
+            "latencyMs": 21,
+            "contentType": "",
+            "finalUrl": "https://live.kwikmotion.com/fujairahlive/fujairah.smil/playlist.m3u8",
+            "bytesRead": 0,
+            "message": "HTTP 403",
+            "checkedAt": "2026-09-13T09:37:03.110754Z"
+          }
+        },
+        {
+          "channelId": "ZeeAlwan.ae",
+          "name": "Zee Alwan",
+          "title": "Zee Alwan",
+          "url": "https://tgn.bozztv.com/gin-dvrfl05/ga-zeealwan/index.m3u8",
+          "format": "HLS",
+          "quality": "576p",
+          "label": "",
+          "country": "AE",
+          "countries": [
+            "AE"
+          ],
+          "languages": [
+            "ara"
+          ],
+          "categories": [
+            "series",
+            "entertainment"
+          ],
+          "website": "https://www.zeealwan.com/",
+          "health": {
+            "url": "https://tgn.bozztv.com/gin-dvrfl05/ga-zeealwan/index.m3u8",
+            "name": "Zee Alwan",
+            "status": "restricted",
+            "httpStatus": 403,
+            "format": "",
+            "latencyMs": 242,
+            "contentType": "",
+            "finalUrl": "https://tgn.bozztv.com/gin-dvrfl05/ga-zeealwan/index.m3u8",
+            "bytesRead": 0,
+            "message": "HTTP 403",
+            "checkedAt": "2026-09-13T09:37:03.122291Z"
+          }
+        },
+        {
+          "channelId": "RitmuTV.kw",
+          "name": "Ritmu TV",
+          "title": "Ritmu TV",
+          "url": "https://659605a54e9a6.streamlock.net:8443/live/livestream/playlist.m3u8",
+          "format": "HLS",
+          "quality": "",
+          "label": "",
+          "country": "KW",
+          "countries": [
+            "KW"
+          ],
+          "languages": [
+            "ara"
+          ],
+          "categories": [
+            "entertainment"
+          ],
+          "website": "https://www.ritmu.tv/",
+          "health": {
+            "url": "https://659605a54e9a6.streamlock.net:8443/live/livestream/playlist.m3u8",
+            "name": "Ritmu TV",
+            "status": "working",
+            "httpStatus": 200,
+            "format": "HLS",
+            "latencyMs": 356,
+            "contentType": "application/vnd.apple.mpegurl",
+            "finalUrl": "https://659605a54e9a6.streamlock.net:8443/live/livestream/playlist.m3u8",
+            "bytesRead": 137,
+            "message": "HLS manifest reachable",
+            "checkedAt": "2026-09-13T09:37:03.132028Z"
+          }
+        }
+      ]
+    }
+  ]
+}
