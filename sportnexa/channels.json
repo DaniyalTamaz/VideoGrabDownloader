@@ -1,6 +1,6 @@
 {
-  "version": "24",
-  "updatedAt": "2026-09-13T12:22:00Z",
+  "version": "25",
+  "updatedAt": "2026-09-13T12:45:00Z",
   "channels": [
     {
       "name": "Al Iraqia Sport",
@@ -228,7 +228,7 @@
       "primaryUrl": "https://raycom-accdn-firetv.amagi.tv/playlist.m3u8",
       "backupUrl": "",
       "logo": "",
-      "enabled": false,
+      "enabled": true,
       "featured": false,
       "order": 23
     },
@@ -258,7 +258,7 @@
       "primaryUrl": "https://cffda8ff.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3VuZy1nYl9GSUZBUGx1c3dvbWVuX0hMUw/playlist.m3u8",
       "backupUrl": "",
       "logo": "",
-      "enabled": false,
+      "enabled": true,
       "featured": false,
       "order": 26
     },
@@ -278,7 +278,7 @@
       "primaryUrl": "https://streams2.sofast.tv/ptnr-yupptv/title-cricketgold/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/b2048bb8-1686-4432-aa50-647245383e0c/manifest.m3u8",
       "backupUrl": "",
       "logo": "",
-      "enabled": false,
+      "enabled": true,
       "featured": false,
       "order": 28
     },
@@ -288,7 +288,7 @@
       "primaryUrl": "https://webstream.multistream.it/memfs/e2cb3629-c1a2-495b-b43a-9eb386f04ed8.m3u8",
       "backupUrl": "",
       "logo": "",
-      "enabled": false,
+      "enabled": true,
       "featured": false,
       "order": 29
     },
@@ -298,7 +298,7 @@
       "primaryUrl": "https://amg02278-amg02278c1-flosports-worldwide-7592.playouts.now.amagi.tv/playlist.m3u8",
       "backupUrl": "",
       "logo": "",
-      "enabled": false,
+      "enabled": true,
       "featured": false,
       "order": 30
     },
@@ -328,7 +328,7 @@
       "primaryUrl": "https://streams2.sofast.tv/vglive-sk-462904/playlist.m3u8",
       "backupUrl": "",
       "logo": "",
-      "enabled": false,
+      "enabled": true,
       "featured": false,
       "order": 33
     },
@@ -338,7 +338,7 @@
       "primaryUrl": "https://linear-253.frequency.stream/mt/roku/253/hls/master/playlist.m3u8",
       "backupUrl": "",
       "logo": "",
-      "enabled": false,
+      "enabled": true,
       "featured": false,
       "order": 34
     },
@@ -348,7 +348,7 @@
       "primaryUrl": "https://6f972d29.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLWV1X0dsb3J5S2lja2JveGluZ19ITFM/playlist.m3u8",
       "backupUrl": "",
       "logo": "",
-      "enabled": false,
+      "enabled": true,
       "featured": false,
       "order": 35
     },
