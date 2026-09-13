@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SportNexa IPTV Importer</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./iptv.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div class="brand">
+        <h1>SportNexa IPTV Importer</h1>
+        <p>Discover IPTV-org candidates, review them, and stage approved streams into SportNexa.</p>
+      </div>
+      <div class="actions">
+        <button class="btn" onclick="location.href='./index.html'">Channel Admin</button>
+        <button class="btn" onclick="location.href='./matches.html'">Matches</button>
+        <button class="btn" onclick="location.href='./version.html'">App Control</button>
+        <button class="btn primary" id="reloadCatalogBtn">Reload IPTV-org</button>
+      </div>
+    </header>
+
+    <section class="notice warning-box">
+      <strong>Production safety rule:</strong> an IPTV-org listing is a discovery lead, not proof that SportNexa may redistribute or embed that channel. Verify the broadcaster's terms before enabling a channel. New imports are <strong>Disabled</strong> by default.
+    </section>
+
+    <section class="stats importer-stats">
+      <div class="stat"><div class="label">Catalog candidates</div><div class="value" id="statCatalog">0</div></div>
+      <div class="stat"><div class="label">Filtered</div><div class="value" id="statFiltered">0</div></div>
+      <div class="stat"><div class="label">Selected</div><div class="value" id="statSelected">0</div></div>
+      <div class="stat"><div class="label">Already in SportNexa</div><div class="value" id="statExisting">0</div></div>
+    </section>
+
+    <section class="panel filter-panel">
+      <div class="panel-head">
+        <div>
+          <h2>Find production candidates</h2>
+          <div class="muted" id="catalogMeta">Catalog not loaded yet.</div>
+        </div>
+        <div class="muted" id="resultMeta">0 matches</div>
+      </div>
+
+      <div class="filter-body">
+        <div class="preset-row">
+          <button class="btn preset" data-country="SA" data-category="sports" data-language="">Saudi Sports</button>
+          <button class="btn preset" data-country="PK" data-category="sports" data-language="">Pakistan Sports</button>
+          <button class="btn preset" data-country="IN" data-category="sports" data-language="">India Sports</button>
+          <button class="btn preset" data-country="" data-category="sports" data-language="ara">Arabic Sports</button>
+          <button class="btn preset" data-country="" data-category="news" data-language="ara">Arabic News</button>
+          <button class="btn preset" data-country="" data-category="entertainment" data-language="ara">Arabic Entertainment</button>
+        </div>
+
+        <div class="filter-grid">
+          <div class="field">
+            <label>Country</label>
+            <select id="countryFilter">
+              <option value="">All countries</option>
+              <option value="SA">Saudi Arabia</option>
+              <option value="PK">Pakistan</option>
+              <option value="IN">India</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Category</label>
+            <select id="categoryFilter">
+              <option value="sports" selected>Sports</option>
+              <option value="news">News</option>
+              <option value="entertainment">Entertainment</option>
+              <option value="">All categories</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Language</label>
+            <select id="languageFilter">
+              <option value="">All languages</option>
+              <option value="ara">Arabic</option>
+              <option value="eng">English</option>
+              <option value="urd">Urdu</option>
+              <option value="hin">Hindi</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Stream format</label>
+            <select id="formatFilter">
+              <option value="streaming" selected>HLS / DASH</option>
+              <option value="hls">HLS only</option>
+              <option value="dash">DASH only</option>
+              <option value="">Any HTTP stream</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="toolbar importer-toolbar">
+          <input class="grow" id="searchInput" placeholder="Search channel, stream title, network, owner or URL">
+          <label class="mini-check"><input id="bestOnly" type="checkbox" checked> Best stream per channel</label>
+          <label class="mini-check"><input id="hideHeaders" type="checkbox" checked> Hide streams requiring custom headers</label>
+          <label class="mini-check"><input id="hideGeo" type="checkbox"> Hide geo-labelled streams</label>
+        </div>
+
+        <div class="selection-actions">
+          <button class="btn" id="selectVisibleBtn">Select visible</button>
+          <button class="btn" id="clearSelectionBtn">Clear selection</button>
+          <span class="muted">Blocked/NSFW channels are always excluded. Header-dependent streams are hidden by default because the current SportNexa channel model does not store per-stream Referer/User-Agent headers.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="layout importer-layout">
+      <div class="panel">
+        <div class="panel-head">
+          <div>
+            <h2>IPTV-org candidates</h2>
+            <div class="muted">Review source metadata before importing. Up to 300 filtered rows are rendered at once.</div>
+          </div>
+        </div>
+        <div class="candidate-list" id="candidateList">
+          <div class="empty">Loading IPTV-org catalog…</div>
+        </div>
+      </div>
+
+      <div>
+        <section class="panel editor import-summary">
+          <h3>Stage selected channels</h3>
+          <p class="muted-copy">Selected candidates are merged into the live <code>sportnexa/channels.json</code>. Existing channels are preserved and duplicate primary URLs are skipped.</p>
+
+          <label class="check"><input id="enableImmediately" type="checkbox"> Enable selected channels immediately</label>
+          <div class="help warning-text">Recommended: leave this OFF. First import candidates as Disabled, review them in Channel Admin, verify broadcaster authorization and playback, then enable only approved channels.</div>
+
+          <div class="field token-field">
+            <label>Fine-grained GitHub token</label>
+            <input id="tokenField" type="password" autocomplete="off" placeholder="Token with Contents: Read and write for VideoGrabDownloader">
+          </div>
+
+          <button class="btn primary wide" id="publishSelectedBtn">Import Selected to SportNexa</button>
+          <div class="status" id="publishStatus">Nothing imported in this session.</div>
+        </section>
+
+        <section class="panel source-panel">
+          <h3>Your IPTV-org source playlists</h3>
+          <p>The importer uses IPTV-org's JSON API because it can join channel, feed, language, logo and stream metadata. Your original M3U sources remain useful for manual checks:</p>
+          <div class="source-links">
+            <a href="https://iptv-org.github.io/iptv/categories/sports.m3u" target="_blank" rel="noreferrer">Sports</a>
+            <a href="https://iptv-org.github.io/iptv/countries/sa.m3u" target="_blank" rel="noreferrer">Saudi Arabia</a>
+            <a href="https://iptv-org.github.io/iptv/countries/pk.m3u" target="_blank" rel="noreferrer">Pakistan</a>
+            <a href="https://iptv-org.github.io/iptv/countries/in.m3u" target="_blank" rel="noreferrer">India</a>
+            <a href="https://iptv-org.github.io/iptv/languages/ara.m3u" target="_blank" rel="noreferrer">Arabic</a>
+            <a href="https://iptv-org.github.io/iptv/categories/news.m3u" target="_blank" rel="noreferrer">News</a>
+            <a href="https://iptv-org.github.io/iptv/categories/entertainment.m3u" target="_blank" rel="noreferrer">Entertainment</a>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <footer>SportNexa Production Importer • IPTV-org data is used for discovery and metadata filtering only.</footer>
+  </main>
+  <script src="./iptv.js"></script>
+</body>
+</html>
