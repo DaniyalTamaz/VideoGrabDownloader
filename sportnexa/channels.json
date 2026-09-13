@@ -1,6 +1,6 @@
 {
-  "version": "8",
-  "updatedAt": "2026-09-13T08:15:31.312Z",
+  "version": "9",
+  "updatedAt": "2026-09-13T08:54:07.789Z",
   "channels": [
     {
       "name": "SportNexa Classic — REMOTE UPDATE",
@@ -91,6 +91,16 @@
       "enabled": false,
       "featured": false,
       "order": 9
+    },
+    {
+      "name": "M Sports",
+      "category": "Sports",
+      "primaryUrl": "https://cdn.rabta.stream/M-Sports/index.m3u8",
+      "backupUrl": "",
+      "logo": "https://msports.pk/wp-content/uploads/2026/02/m-sports-300.png",
+      "enabled": false,
+      "featured": false,
+      "order": 10
     }
   ]
 }
