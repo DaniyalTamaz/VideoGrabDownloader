@@ -1,25 +1,78 @@
 {
   "version": "1",
-  "queueId": "1789288501536-q439l54",
-  "requestedAt": "2026-09-13T08:35:01.536Z",
-  "testedAt": "2026-09-13T08:34:10.046380Z",
+  "queueId": "pakistan-sports-retry-20260913-1",
+  "requestedAt": "2026-09-13T08:50:00Z",
+  "testedAt": "2026-09-13T08:49:57.948555Z",
   "runnerRegionNote": "Tested from a GitHub-hosted cloud runner. Geo-restricted results can differ on the user device.",
   "counts": {
-    "timeout": 1
+    "working": 2,
+    "timeout": 3
   },
   "results": [
+    {
+      "url": "https://cdn.rabta.stream/M-Sports/index.m3u8",
+      "name": "M Sports",
+      "status": "working",
+      "httpStatus": 200,
+      "format": "HLS",
+      "latencyMs": 930,
+      "contentType": "application/vnd.apple.mpegurl",
+      "finalUrl": "https://cdn.rabta.stream/M-Sports/index.m3u8",
+      "bytesRead": 186,
+      "message": "HLS manifest reachable",
+      "checkedAt": "2026-09-13T08:49:45.832138Z"
+    },
+    {
+      "url": "http://162.250.201.58:6211/pk/ONEGOLF/index.m3u8",
+      "name": "One Golf",
+      "status": "timeout",
+      "httpStatus": null,
+      "format": "",
+      "latencyMs": 12099,
+      "contentType": "",
+      "finalUrl": "",
+      "bytesRead": 0,
+      "message": "Timed out after 12s",
+      "checkedAt": "2026-09-13T08:49:45.832854Z"
+    },
+    {
+      "url": "https://lbgo.bozztv.com/ssh101/ssh101/pksportshd/playlist.m3u8",
+      "name": "PK Sports",
+      "status": "working",
+      "httpStatus": 200,
+      "format": "HLS",
+      "latencyMs": 325,
+      "contentType": "application/vnd.apple.mpegurl",
+      "finalUrl": "https://lbgo.bozztv.com/ssh101/ssh101/pksportshd/playlist.m3u8",
+      "bytesRead": 205,
+      "message": "HLS manifest reachable",
+      "checkedAt": "2026-09-13T08:49:45.833384Z"
+    },
     {
       "url": "http://103.250.28.74:8000/play/a019/index.m3u8",
       "name": "PTV Sports",
       "status": "timeout",
       "httpStatus": null,
       "format": "",
-      "latencyMs": 12034,
+      "latencyMs": 12106,
       "contentType": "",
       "finalUrl": "",
       "bytesRead": 0,
       "message": "Timed out after 12s",
-      "checkedAt": "2026-09-13T08:33:58.011320Z"
+      "checkedAt": "2026-09-13T08:49:45.834087Z"
+    },
+    {
+      "url": "http://121.91.61.106:8000/play/a04h/index.m3u8",
+      "name": "Ten Sports Pakistan",
+      "status": "timeout",
+      "httpStatus": null,
+      "format": "",
+      "latencyMs": 12113,
+      "contentType": "",
+      "finalUrl": "",
+      "bytesRead": 0,
+      "message": "Timed out after 12s",
+      "checkedAt": "2026-09-13T08:49:45.834885Z"
     }
   ]
 }
