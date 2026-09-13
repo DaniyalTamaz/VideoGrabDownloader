@@ -1,0 +1,44 @@
+name: SportNexa Stream Health
+
+on:
+  push:
+    paths:
+      - 'sportnexa/health-queue.json'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sportnexa-stream-health
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Test queued streams
+        run: python sportnexa/tools/check_stream_health.py sportnexa/health-queue.json sportnexa/health-results.json
+
+      - name: Publish health results
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add sportnexa/health-results.json
+          if git diff --cached --quiet; then
+            echo "No health result changes to publish."
+            exit 0
+          fi
+          git commit -m "Update SportNexa stream health results"
+          git pull --rebase origin "${GITHUB_REF_NAME:-main}"
+          git push origin "HEAD:${GITHUB_REF_NAME:-main}"
