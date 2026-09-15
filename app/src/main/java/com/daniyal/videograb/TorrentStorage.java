@@ -40,7 +40,7 @@ public final class TorrentStorage {
         return out;
     }
 
-    public static File fetchTorrentUrl(Context c, String url, String cookie, String userAgent, String referer, String taskId) throws IOException {
+    public static File fetchTorrentUrl(Context c, String url, String cookie, String userAgent, String referer, String taskId) throws Exception {
         HttpURLConnection con = HlsInspector.open(url, cookie, userAgent, referer);
         con.setInstanceFollowRedirects(true);
         int code = con.getResponseCode();
