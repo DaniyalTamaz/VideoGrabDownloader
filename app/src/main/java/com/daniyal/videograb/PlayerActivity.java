@@ -22,7 +22,6 @@ public class PlayerActivity extends AppCompatActivity {
     @Override protected void onCreate(Bundle savedInstanceState) {
         AppPrefs.applyTheme(this);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_player);
 
         String raw = getIntent().getStringExtra(EXTRA_URI);
         String mime = getIntent().getStringExtra(EXTRA_MIME);
@@ -30,6 +29,16 @@ public class PlayerActivity extends AppCompatActivity {
         if (raw == null) { finish(); return; }
 
         Uri uri = Uri.parse(raw);
+        if ("application/x-videograb-torrent".equals(mime) || "videograb-torrent".equals(uri.getScheme())) {
+            String taskId = uri.getHost();
+            if (taskId == null || taskId.isEmpty()) taskId = uri.getSchemeSpecificPart().replaceFirst("^//", "");
+            Intent i = new Intent(this, TorrentFilesActivity.class).putExtra(TorrentFilesActivity.EXTRA_TASK_ID, taskId);
+            startActivity(i);
+            finish();
+            return;
+        }
+
+        setContentView(R.layout.activity_player);
         MaterialToolbar toolbar = findViewById(R.id.player_toolbar);
         TextView nameView = findViewById(R.id.player_name);
         TextView meta = findViewById(R.id.player_meta);

@@ -18,17 +18,20 @@ public class DownloadQueueService extends Service {
     private static final AtomicBoolean RUNNING=new AtomicBoolean(false);
     private static class Paused extends Exception{} private static class Canceled extends Exception{}
 
-    public static void enqueue(Context c,DownloadTask t){t.updatedAt=System.currentTimeMillis();DownloadTaskStore.upsert(c,t);kick(c);}
-    public static void pause(Context c,String id){DownloadTask t=DownloadTaskStore.get(c,id);if(t!=null){t.status=DownloadTask.STATUS_PAUSED;t.speedBps=0;t.updatedAt=System.currentTimeMillis();DownloadTaskStore.upsert(c,t);if(DownloadTask.KIND_DASH.equals(t.kind))FFmpegKit.cancel();}}
-    public static void resume(Context c,String id){DownloadTask t=DownloadTaskStore.get(c,id);if(t!=null){t.status=DownloadTask.STATUS_QUEUED;t.error="";t.speedBps=0;t.updatedAt=System.currentTimeMillis();DownloadTaskStore.upsert(c,t);kick(c);}}
-    public static void cancel(Context c,String id){DownloadTask t=DownloadTaskStore.get(c,id);if(t!=null){t.status=DownloadTask.STATUS_CANCELED;t.speedBps=0;t.updatedAt=System.currentTimeMillis();DownloadTaskStore.upsert(c,t);if(DownloadTask.KIND_DASH.equals(t.kind))FFmpegKit.cancel();if(!t.tempPath.isEmpty())new File(t.tempPath).delete();}}
+    public static void enqueue(Context c,DownloadTask t){
+        if(DownloadTask.KIND_TORRENT.equals(t.kind)){TorrentDownloadService.enqueue(c,t);return;}
+        t.updatedAt=System.currentTimeMillis();DownloadTaskStore.upsert(c,t);kick(c);
+    }
+    public static void pause(Context c,String id){DownloadTask t=DownloadTaskStore.get(c,id);if(t!=null){if(DownloadTask.KIND_TORRENT.equals(t.kind)){TorrentDownloadService.pause(c,id);return;}t.status=DownloadTask.STATUS_PAUSED;t.speedBps=0;t.updatedAt=System.currentTimeMillis();DownloadTaskStore.upsert(c,t);if(DownloadTask.KIND_DASH.equals(t.kind))FFmpegKit.cancel();}}
+    public static void resume(Context c,String id){DownloadTask t=DownloadTaskStore.get(c,id);if(t!=null){if(DownloadTask.KIND_TORRENT.equals(t.kind)){TorrentDownloadService.resume(c,id);return;}t.status=DownloadTask.STATUS_QUEUED;t.error="";t.speedBps=0;t.updatedAt=System.currentTimeMillis();DownloadTaskStore.upsert(c,t);kick(c);}}
+    public static void cancel(Context c,String id){DownloadTask t=DownloadTaskStore.get(c,id);if(t!=null){if(DownloadTask.KIND_TORRENT.equals(t.kind)){TorrentDownloadService.cancel(c,id);return;}t.status=DownloadTask.STATUS_CANCELED;t.speedBps=0;t.updatedAt=System.currentTimeMillis();DownloadTaskStore.upsert(c,t);if(DownloadTask.KIND_DASH.equals(t.kind))FFmpegKit.cancel();if(!t.tempPath.isEmpty())new File(t.tempPath).delete();}}
     public static void kick(Context c){c.startForegroundService(new Intent(c,DownloadQueueService.class));}
 
     @Override public void onCreate(){super.onCreate();getSystemService(NotificationManager.class).createNotificationChannel(new NotificationChannel(CHANNEL,"VideoGrab downloads",NotificationManager.IMPORTANCE_LOW));}
     @Override public int onStartCommand(Intent i,int f,int id){startForeground(NID,note("Checking queue",0,true,0));if(RUNNING.compareAndSet(false,true))new Thread(()->work(id),"vg-queue").start();return START_NOT_STICKY;}
 
     private void work(int startId){try{while(true){DownloadTask t=next();if(t==null)break;t.status=DownloadTask.STATUS_DOWNLOADING;t.updatedAt=System.currentTimeMillis();DownloadTaskStore.upsert(this,t);try{if(DownloadTask.KIND_HLS.equals(t.kind))hls(t);else if(DownloadTask.KIND_DASH.equals(t.kind))dash(t);else direct(t);}catch(Paused|Canceled ignored){}catch(Exception e){DownloadTask x=DownloadTaskStore.get(this,t.id);if(x!=null&&!DownloadTask.STATUS_PAUSED.equals(x.status)&&!DownloadTask.STATUS_CANCELED.equals(x.status)){x.status=DownloadTask.STATUS_FAILED;x.speedBps=0;x.updatedAt=System.currentTimeMillis();x.error=shortMsg(e.getMessage());DownloadTaskStore.upsert(this,x);}}}}finally{RUNNING.set(false);stopForeground(STOP_FOREGROUND_REMOVE);stopSelf(startId);if(next()!=null)kick(this);}}
-    private DownloadTask next(){DownloadTask best=null;for(DownloadTask t:DownloadTaskStore.list(this))if(DownloadTask.STATUS_QUEUED.equals(t.status)&&(best==null||t.createdAt<best.createdAt))best=t;return best;}
+    private DownloadTask next(){DownloadTask best=null;for(DownloadTask t:DownloadTaskStore.list(this))if(!DownloadTask.KIND_TORRENT.equals(t.kind)&&DownloadTask.STATUS_QUEUED.equals(t.status)&&(best==null||t.createdAt<best.createdAt))best=t;return best;}
 
     private void direct(DownloadTask t)throws Exception{
         File file=temp(t,".part");long off=file.exists()?file.length():0;HttpURLConnection c=HlsInspector.open(t.url,t.cookie,t.userAgent,t.referer);if(off>0)c.setRequestProperty("Range","bytes="+off+"-");int code=c.getResponseCode();if(code<200||code>=300)throw new IOException("HTTP "+code);if(off>0&&code!=206){off=0;new RandomAccessFile(file,"rw").setLength(0);}long len=c.getContentLengthLong();t.total=len>0?off+len:-1;t.downloaded=off;String ct=c.getContentType();if(ct!=null)t.mime=ct.split(";")[0];DownloadTaskStore.upsert(this,t);

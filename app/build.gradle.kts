@@ -10,8 +10,8 @@ android {
         applicationId = "com.daniyal.videograb"
         minSdk = 29
         targetSdk = 36
-        versionCode = 6
-        versionName = "5.0.0"
+        versionCode = 7
+        versionName = "5.1.0"
     }
 
     buildTypes {
@@ -32,4 +32,10 @@ dependencies {
     implementation("androidx.drawerlayout:drawerlayout:1.2.0")
     implementation("com.google.android.material:material:1.12.0")
     implementation("dev.ffmpegkit-maintained:ffmpeg-kit-full-gpl:8.1.7")
+
+    implementation("org.libtorrent4j:libtorrent4j:2.1.0-39")
+    implementation("org.libtorrent4j:libtorrent4j-android-arm64:2.1.0-39")
+    implementation("org.libtorrent4j:libtorrent4j-android-arm:2.1.0-39")
+    implementation("org.libtorrent4j:libtorrent4j-android-x86:2.1.0-39")
+    implementation("org.libtorrent4j:libtorrent4j-android-x86_64:2.1.0-39")
 }

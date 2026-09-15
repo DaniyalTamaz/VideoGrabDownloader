@@ -8,6 +8,7 @@ public class DownloadTask {
     public static final String KIND_DIRECT = "direct";
     public static final String KIND_HLS = "hls";
     public static final String KIND_DASH = "dash";
+    public static final String KIND_TORRENT = "torrent";
     public static final String MODE_VIDEO = "video";
     public static final String MODE_MP3 = "mp3";
     public static final String STATUS_QUEUED = "queued";
@@ -31,6 +32,11 @@ public class DownloadTask {
     public String outputUri = "";
     public String error = "";
     public String mime = "video/mp4";
+    public String torrentMetaPath = "";
+    public String torrentHash = "";
+    public int torrentPeers = 0;
+    public int torrentSeeds = 0;
+    public int torrentFiles = 0;
     public int progress = 0;
     public int mp3Bitrate = 192;
     public int segmentIndex = 0;
@@ -47,7 +53,9 @@ public class DownloadTask {
         o.put("id", id); o.put("name", name); o.put("url", url); o.put("kind", kind); o.put("mode", mode);
         o.put("quality", quality); o.put("status", status); o.put("userAgent", userAgent); o.put("cookie", cookie);
         o.put("referer", referer); o.put("tempPath", tempPath); o.put("outputUri", outputUri); o.put("error", error);
-        o.put("mime", mime); o.put("progress", progress); o.put("mp3Bitrate", mp3Bitrate); o.put("segmentIndex", segmentIndex);
+        o.put("mime", mime); o.put("torrentMetaPath", torrentMetaPath); o.put("torrentHash", torrentHash);
+        o.put("torrentPeers", torrentPeers); o.put("torrentSeeds", torrentSeeds); o.put("torrentFiles", torrentFiles);
+        o.put("progress", progress); o.put("mp3Bitrate", mp3Bitrate); o.put("segmentIndex", segmentIndex);
         o.put("dashVideoStream", dashVideoStream); o.put("dashAudioStream", dashAudioStream);
         o.put("downloaded", downloaded); o.put("total", total); o.put("speedBps", speedBps); o.put("updatedAt", updatedAt); o.put("createdAt", createdAt);
         return o;
@@ -59,8 +67,10 @@ public class DownloadTask {
         t.kind = o.optString("kind", KIND_DIRECT); t.mode = o.optString("mode", MODE_VIDEO); t.quality = o.optString("quality", "Original");
         t.status = o.optString("status", STATUS_QUEUED); t.userAgent = o.optString("userAgent", ""); t.cookie = o.optString("cookie", "");
         t.referer = o.optString("referer", ""); t.tempPath = o.optString("tempPath", ""); t.outputUri = o.optString("outputUri", "");
-        t.error = o.optString("error", ""); t.mime = o.optString("mime", "video/mp4"); t.progress = o.optInt("progress", 0);
-        t.mp3Bitrate = o.optInt("mp3Bitrate", 192); t.segmentIndex = o.optInt("segmentIndex", 0);
+        t.error = o.optString("error", ""); t.mime = o.optString("mime", "video/mp4");
+        t.torrentMetaPath = o.optString("torrentMetaPath", ""); t.torrentHash = o.optString("torrentHash", "");
+        t.torrentPeers = o.optInt("torrentPeers", 0); t.torrentSeeds = o.optInt("torrentSeeds", 0); t.torrentFiles = o.optInt("torrentFiles", 0);
+        t.progress = o.optInt("progress", 0); t.mp3Bitrate = o.optInt("mp3Bitrate", 192); t.segmentIndex = o.optInt("segmentIndex", 0);
         t.dashVideoStream = o.optInt("dashVideoStream", -1); t.dashAudioStream = o.optInt("dashAudioStream", -1);
         t.downloaded = o.optLong("downloaded", 0); t.total = o.optLong("total", -1); t.speedBps = o.optLong("speedBps", 0);
         t.updatedAt = o.optLong("updatedAt", System.currentTimeMillis()); t.createdAt = o.optLong("createdAt", System.currentTimeMillis());
@@ -69,8 +79,11 @@ public class DownloadTask {
 
     public String shortStatus() {
         switch (status) {
-            case STATUS_QUEUED: return "Queued";
-            case STATUS_DOWNLOADING: return KIND_DASH.equals(kind) ? "Processing DASH • " + progress + "%" : "Downloading " + progress + "%";
+            case STATUS_QUEUED: return KIND_TORRENT.equals(kind) ? "Waiting for peers" : "Queued";
+            case STATUS_DOWNLOADING:
+                if (KIND_DASH.equals(kind)) return "Processing DASH • " + progress + "%";
+                if (KIND_TORRENT.equals(kind)) return "P2P • " + progress + "% • " + torrentPeers + " peers";
+                return "Downloading " + progress + "%";
             case STATUS_PAUSED: return "Paused • " + progress + "%";
             case STATUS_COMPLETED: return "Completed";
             case STATUS_FAILED: return "Failed";
