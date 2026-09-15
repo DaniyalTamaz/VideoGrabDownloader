@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">VideoGrab</string>
-    <string name="notification_channel_name">Video downloads</string>
+    <string name="home">Home</string>
+    <string name="browser">Browser</string>
+    <string name="downloads">Downloads</string>
+    <string name="library">Library</string>
+    <string name="settings">Settings</string>
 </resources>

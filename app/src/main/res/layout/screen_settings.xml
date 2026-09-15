@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:background="@color/vg_background">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Preferences" android:textColor="@color/vg_text" android:textSize="24sp" android:textStyle="bold" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:layout_marginBottom="14dp" android:text="Tune VideoGrab to the way you download." android:textColor="@color/vg_text_muted" android:textSize="13sp" />
+
+        <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" app:cardBackgroundColor="@color/vg_surface" app:cardCornerRadius="20dp" app:strokeColor="@color/vg_outline" app:strokeWidth="1dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Detection" android:textColor="@color/vg_primary" android:textSize="13sp" android:textStyle="bold" />
+                <com.google.android.material.switchmaterial.SwitchMaterial android:id="@+id/setting_hide_small" android:layout_width="match_parent" android:layout_height="56dp" android:text="Hide small/ad-like media" android:textColor="@color/vg_text" android:textSize="15sp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="2dp" android:paddingEnd="2dp" android:text="Keeps likely ads and tiny background clips out of the main detection list. You can still reveal all results from the media picker." android:textColor="@color/vg_text_muted" android:textSize="12sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" app:cardBackgroundColor="@color/vg_surface" app:cardCornerRadius="20dp" app:strokeColor="@color/vg_outline" app:strokeWidth="1dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Appearance &amp; output" android:textColor="@color/vg_primary" android:textSize="13sp" android:textStyle="bold" />
+                <com.google.android.material.button.MaterialButton android:id="@+id/setting_theme" style="@style/Widget.Material3.Button.TextButton" android:layout_width="match_parent" android:layout_height="52dp" android:gravity="start|center_vertical" android:text="Theme • System" android:textAllCaps="false" android:textColor="@color/vg_text" />
+                <com.google.android.material.button.MaterialButton android:id="@+id/setting_mp3" style="@style/Widget.Material3.Button.TextButton" android:layout_width="match_parent" android:layout_height="52dp" android:gravity="start|center_vertical" android:text="Default MP3 • 192 kbps" android:textAllCaps="false" android:textColor="@color/vg_text" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" app:cardBackgroundColor="@color/vg_surface" app:cardCornerRadius="20dp" app:strokeColor="@color/vg_outline" app:strokeWidth="1dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Storage &amp; privacy" android:textColor="@color/vg_primary" android:textSize="13sp" android:textStyle="bold" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingTop="14dp" android:paddingBottom="4dp" android:text="Download folder" android:textColor="@color/vg_text" android:textSize="15sp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingBottom="10dp" android:text="Downloads/VideoGrab" android:textColor="@color/vg_text_muted" android:textSize="12sp" />
+                <com.google.android.material.button.MaterialButton android:id="@+id/setting_clear_browser" style="@style/Widget.Material3.Button.TextButton" android:layout_width="match_parent" android:layout_height="52dp" android:gravity="start|center_vertical" android:text="Clear browser data" android:textAllCaps="false" android:textColor="@color/vg_text" />
+                <com.google.android.material.button.MaterialButton android:id="@+id/setting_clear_finished" style="@style/Widget.Material3.Button.TextButton" android:layout_width="match_parent" android:layout_height="52dp" android:gravity="start|center_vertical" android:text="Clear finished queue records" android:textAllCaps="false" android:textColor="@color/vg_text" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" app:cardBackgroundColor="@color/vg_surface" app:cardCornerRadius="20dp" app:strokeColor="@color/vg_outline" app:strokeWidth="1dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="About" android:textColor="@color/vg_primary" android:textSize="13sp" android:textStyle="bold" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="VideoGrab 5.0.0" android:textColor="@color/vg_text" android:textSize="16sp" android:textStyle="bold" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="Direct video, non-encrypted HLS, non-DRM DASH quality selection/merge, local MP3 conversion, pause/resume queue, and an on-device media library." android:textColor="@color/vg_text_muted" android:textSize="12sp" android:lineSpacingExtra="2dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <Space android:layout_width="1dp" android:layout_height="24dp" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

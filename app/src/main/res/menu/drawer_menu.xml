@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_home" android:icon="@drawable/ic_home" android:title="Home" />
+        <item android:id="@+id/nav_browser" android:icon="@drawable/ic_browser" android:title="Browser &amp; detector" />
+        <item android:id="@+id/nav_downloads" android:icon="@drawable/ic_download_nav" android:title="Download manager" />
+        <item android:id="@+id/nav_library" android:icon="@drawable/ic_library" android:title="Media library" />
+        <item android:id="@+id/nav_settings" android:icon="@drawable/ic_settings" android:title="Settings" />
+    </group>
+</menu>

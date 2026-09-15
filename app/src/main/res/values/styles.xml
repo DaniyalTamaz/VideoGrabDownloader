@@ -1,9 +1,15 @@
 <resources>
-    <style name="AppTheme" parent="android:style/Theme.Material.Light.NoActionBar">
+    <style name="AppTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/vg_primary</item>
+        <item name="colorOnPrimary">@color/vg_on_primary</item>
+        <item name="colorPrimaryContainer">@color/vg_primary_container</item>
+        <item name="colorOnPrimaryContainer">@color/vg_on_primary_container</item>
+        <item name="colorSecondary">@color/vg_secondary</item>
+        <item name="android:colorAccent">@color/vg_primary</item>
         <item name="android:fontFamily">sans</item>
-        <item name="android:windowActionModeOverlay">true</item>
-        <item name="android:navigationBarColor">#202124</item>
-        <item name="android:statusBarColor">#202124</item>
-        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowBackground">@color/vg_background</item>
+        <item name="android:statusBarColor">@color/vg_surface</item>
+        <item name="android:navigationBarColor">@color/vg_surface</item>
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.Material3.MaterialAlertDialog</item>
     </style>
 </resources>

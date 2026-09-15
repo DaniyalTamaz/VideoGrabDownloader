@@ -10,8 +10,8 @@ android {
         applicationId = "com.daniyal.videograb"
         minSdk = 29
         targetSdk = 36
-        versionCode = 5
-        versionName = "4.1.0"
+        versionCode = 6
+        versionName = "5.0.0"
     }
 
     buildTypes {
@@ -28,5 +28,8 @@ android {
 }
 
 dependencies {
+    implementation("androidx.appcompat:appcompat:1.7.0")
+    implementation("androidx.drawerlayout:drawerlayout:1.2.0")
+    implementation("com.google.android.material:material:1.12.0")
     implementation("dev.ffmpegkit-maintained:ffmpeg-kit-full-gpl:8.1.7")
 }

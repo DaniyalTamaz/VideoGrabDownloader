@@ -1,0 +1,17 @@
+<resources>
+    <color name="vg_primary">#A7A5FF</color>
+    <color name="vg_on_primary">#211A73</color>
+    <color name="vg_primary_container">#34316D</color>
+    <color name="vg_on_primary_container">#E9E7FF</color>
+    <color name="vg_secondary">#62D6B7</color>
+    <color name="vg_background">#0E111A</color>
+    <color name="vg_surface">#171B27</color>
+    <color name="vg_surface_variant">#232838</color>
+    <color name="vg_text">#F4F5FA</color>
+    <color name="vg_text_muted">#A9B0C2</color>
+    <color name="vg_outline">#3A4055</color>
+    <color name="vg_success">#57D5A1</color>
+    <color name="vg_warning">#FFBD66</color>
+    <color name="vg_error">#FF8A8A</color>
+    <color name="launcher_background">#0E111A</color>
+</resources>

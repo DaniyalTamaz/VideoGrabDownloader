@@ -38,6 +38,8 @@ public class DownloadTask {
     public int dashAudioStream = -1;
     public long downloaded = 0;
     public long total = -1;
+    public long speedBps = 0;
+    public long updatedAt = System.currentTimeMillis();
     public long createdAt = System.currentTimeMillis();
 
     public JSONObject toJson() throws JSONException {
@@ -47,7 +49,7 @@ public class DownloadTask {
         o.put("referer", referer); o.put("tempPath", tempPath); o.put("outputUri", outputUri); o.put("error", error);
         o.put("mime", mime); o.put("progress", progress); o.put("mp3Bitrate", mp3Bitrate); o.put("segmentIndex", segmentIndex);
         o.put("dashVideoStream", dashVideoStream); o.put("dashAudioStream", dashAudioStream);
-        o.put("downloaded", downloaded); o.put("total", total); o.put("createdAt", createdAt);
+        o.put("downloaded", downloaded); o.put("total", total); o.put("speedBps", speedBps); o.put("updatedAt", updatedAt); o.put("createdAt", createdAt);
         return o;
     }
 
@@ -60,14 +62,15 @@ public class DownloadTask {
         t.error = o.optString("error", ""); t.mime = o.optString("mime", "video/mp4"); t.progress = o.optInt("progress", 0);
         t.mp3Bitrate = o.optInt("mp3Bitrate", 192); t.segmentIndex = o.optInt("segmentIndex", 0);
         t.dashVideoStream = o.optInt("dashVideoStream", -1); t.dashAudioStream = o.optInt("dashAudioStream", -1);
-        t.downloaded = o.optLong("downloaded", 0); t.total = o.optLong("total", -1); t.createdAt = o.optLong("createdAt", System.currentTimeMillis());
+        t.downloaded = o.optLong("downloaded", 0); t.total = o.optLong("total", -1); t.speedBps = o.optLong("speedBps", 0);
+        t.updatedAt = o.optLong("updatedAt", System.currentTimeMillis()); t.createdAt = o.optLong("createdAt", System.currentTimeMillis());
         return t;
     }
 
     public String shortStatus() {
         switch (status) {
             case STATUS_QUEUED: return "Queued";
-            case STATUS_DOWNLOADING: return DownloadTask.KIND_DASH.equals(kind) ? "Processing DASH • " + progress + "%" : "Downloading " + progress + "%";
+            case STATUS_DOWNLOADING: return KIND_DASH.equals(kind) ? "Processing DASH • " + progress + "%" : "Downloading " + progress + "%";
             case STATUS_PAUSED: return "Paused • " + progress + "%";
             case STATUS_COMPLETED: return "Completed";
             case STATUS_FAILED: return "Failed";
