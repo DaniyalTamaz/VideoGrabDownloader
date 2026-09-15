@@ -23,10 +23,19 @@ public class TorrentMainActivity extends MainActivity {
 
     @Override protected void onCreate(Bundle state) {
         super.onCreate(state);
+        // If Android killed the torrent engine/process while a download was active,
+        // reopening VideoGrab restarts queued/downloading torrents automatically.
+        TorrentDownloadService.recover(this);
+
         View root = findViewById(android.R.id.content);
         hook = this::installTorrentHooks;
         root.getViewTreeObserver().addOnGlobalLayoutListener(hook);
         installTorrentHooks();
+    }
+
+    @Override protected void onResume() {
+        super.onResume();
+        TorrentDownloadService.recover(this);
     }
 
     private void installTorrentHooks() {
@@ -112,8 +121,7 @@ public class TorrentMainActivity extends MainActivity {
 
     private void openTorrentSource(String source) {
         Intent i = new Intent(this, TorrentAddActivity.class);
-        if (source != null && source.toLowerCase(Locale.ROOT).startsWith("magnet:?")) i.setData(Uri.parse(source)).setAction(Intent.ACTION_VIEW);
-        else i.setData(Uri.parse(source)).setAction(Intent.ACTION_VIEW);
+        i.setData(Uri.parse(source)).setAction(Intent.ACTION_VIEW);
         startActivity(i);
     }
 
