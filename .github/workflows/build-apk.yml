@@ -5,6 +5,9 @@ on:
   push:
     branches: [ "main", "master" ]
 
+permissions:
+  contents: read
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -35,14 +38,26 @@ jobs:
         with:
           gradle-version: '9.6.0'
 
+      - name: Run Android lint
+        run: gradle --no-daemon :app:lintDebug
+
       - name: Build debug APK
         run: gradle --no-daemon :app:assembleDebug
+
+      - name: Verify APK package metadata
+        run: |
+          APK="app/build/outputs/apk/debug/app-debug.apk"
+          test -s "$APK"
+          $ANDROID_HOME/build-tools/36.0.0/aapt dump badging "$APK" | grep -q "package: name='com.daniyal.videograb'"
+          sha256sum "$APK" | tee app-debug.apk.sha256
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: VideoGrab-debug-apk
-          path: app/build/outputs/apk/debug/app-debug.apk
+          path: |
+            app/build/outputs/apk/debug/app-debug.apk
+            app-debug.apk.sha256
           if-no-files-found: error
 
 # Cloud build: no Android Studio required on the local PC.
